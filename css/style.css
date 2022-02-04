@@ -640,28 +640,51 @@ ol.style1 li {
 
 
 .table-timeline {
-	font-size: larger;
-	border: 8px, solid, blue;
-	border-collapse: collapse;
-	line-height: 1.3em;
-}
-
-table {
-	border: 2px, solid, blue;
+	font-size: x-large;
+	line-height: 1.5em;
 }
 
 .table-timeline caption {
 	font-size: xx-large;
 	padding: 30px;
 	font-weight: 700;
+	letter-spacing: 0.1em;
 }
 
 .table-timeline .td-date {
 	text-align: center;
 	vertical-align: middle;
-	width: auto;
+	width: 10%;
+}
+
+.table-timeline .td-notes {
+	width: 20%;
+}
+
+.table-timeline .td-notes span {
+	margin: 0em 0.5em;
+	text-indent: 1em;
 }
 
 .table-timeline th {
 	font-weight: 700;
+}
+
+.table-timeline td,
+.table-timeline th {
+	cursor: default;
+	padding: 0.35em 0 0.35em 0;
+	border: solid 0.1px rgba(201, 70, 99, 0.2);
+	vertical-align: middle;
+	/* box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.075); */
+}
+
+.table-timeline td span {
+	margin: 0em 0.5em;
+	display: block;
+	text-indent: 2em;
+}
+
+.table-timeline td span cite {
+	color: red;
 }
