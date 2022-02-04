@@ -456,6 +456,10 @@ ol.style1 li {
 	position: relative;
 }
 
+.is-post p {
+	font-size: 1.5em;
+}
+
 .is-post .info {}
 
 .is-post .info .stats {
@@ -638,6 +642,7 @@ ol.style1 li {
 .table-timeline {
 	font-size: x-large;
 	border: 8px, solid, red;
+	line-height: 1.3em;
 }
 
 .table-timeline caption {
