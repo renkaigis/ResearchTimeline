@@ -641,8 +641,14 @@ ol.style1 li {
 
 .table-timeline {
 	font-size: x-large;
-	border: 8px, solid, red;
+	border: 8px, solid, blue;
+	border-top: 8px, solid, red;
+	border-collapse: collapse;
 	line-height: 1.3em;
+}
+
+table {
+	border: 2px, solid, blue;
 }
 
 .table-timeline caption {
