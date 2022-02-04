@@ -640,7 +640,7 @@ ol.style1 li {
 
 
 .table-timeline {
-	font-size: x-large;
+	font-size: larger;
 	border: 8px, solid, blue;
 	border-collapse: collapse;
 	line-height: 1.3em;
