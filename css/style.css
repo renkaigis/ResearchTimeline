@@ -639,6 +639,8 @@ ol.style1 li {
 }
 
 
+/* My Style */
+
 .table-timeline {
 	font-size: x-large;
 	line-height: 1.5em;
@@ -663,6 +665,7 @@ ol.style1 li {
 
 .table-timeline .td-notes span {
 	margin: 0em 0.5em;
+	display: block;
 	text-indent: 1em;
 }
 
@@ -679,12 +682,31 @@ ol.style1 li {
 	/* box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.075); */
 }
 
-.table-timeline td span {
+.table-timeline .td-content span {
 	margin: 0em 0.5em;
 	display: block;
 	text-indent: 2em;
 }
 
+.table-timeline td cite,
 .table-timeline td span cite {
 	color: red;
+}
+
+.meeting-p {
+	text-indent: 2em;
+	line-height: 150%;
+}
+
+.td-notes a:link {
+	color: purple;
+}
+
+.td-notes a:visited {
+	color: gray;
+}
+
+.td-notes a:hover {
+	color: hotpink;
+	text-decoration: dashed;
 }
