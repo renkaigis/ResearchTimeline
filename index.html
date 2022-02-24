@@ -9,6 +9,11 @@
 		rel="stylesheet" />
 	<script src="js/jquery-3.6.0.min.js"></script>
 	<script src="css/5grid/init.js?use=mobile,desktop,1200px,1000px&amp;mobileUI=1&amp;mobileUI.theme=none"></script>
+	<link rel="stylesheet" href="css/devibeans.min.css">
+	<script src="http://apps.bdimg.com/libs/highlight.js/9.1.0/highlight.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.5.0/highlightjs-line-numbers.min.js">
+	</script>
 	<noscript>
 		<link rel="stylesheet" href="css/5grid/core.css" />
 		<link rel="stylesheet" href="css/5grid/core-desktop.css" />
@@ -107,7 +112,7 @@
 						2️⃣ 每周微信群文字汇报一次（周五）；
 					</p>
 					<p style="text-indent: 2em;">
-						3️⃣ 每两周腾讯会议汇报一次。
+						3️⃣ 每两周腾讯会议汇报一次（周五 / 周六）。
 					</p>
 					<table class="table-timeline">
 						<caption>
@@ -235,23 +240,23 @@
 						</tr>
 						<tr>
 							<td class="td-date">21</td>
-							<td class="td-content"><span>-</span></td>
-							<td class="td-notes"><span></span></td>
+							<td class="td-content" rowspan="4"><span>
+									① TX90_TN90.js 文件成功修改为计算“中国区域”，SILO 数据替换为 ERA5。
+
+								</span><span>
+									②</span>
+							</td>
+							<td class="td-notes" rowspan="4"><span><a href="post/20220224.html"
+										target="_blank">查看详情>></a></span></td>
 						</tr>
 						<tr>
 							<td class="td-date">22</td>
-							<td class="td-content"><span>-</span></td>
-							<td class="td-notes"><span></span></td>
 						</tr>
 						<tr>
 							<td class="td-date">23</td>
-							<td class="td-content"><span>-</span></td>
-							<td class="td-notes"><span></span></td>
 						</tr>
 						<tr>
 							<td class="td-date">24</td>
-							<td class="td-content"><span>-</span></td>
-							<td class="td-notes"><span></span></td>
 						</tr>
 						<tr>
 							<td class="td-date">25</td>
@@ -608,11 +613,11 @@
 		</div>
 
 	</div>
-
-	<!-- <div style="display:none">
-		<script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'>
-		</script>
-	</div> -->
+	<!-- 代码块 -->
+	<script>
+		hljs.initHighlightingOnLoad();
+		hljs.initLineNumbersOnLoad();
+	</script>
 </body>
 
 </html>

@@ -719,3 +719,36 @@ ol.style1 li {
 	margin-top: 1em;
 	color: #999;
 }
+
+cite {
+	color: red;
+	font-weight: 600;
+	font-family: Consolas, Monaco, monospace;
+}
+
+/* 代码块 */
+code {
+	display: block;
+	font-family: Consolas, Cursive, monospace, Monaco;
+	font-size: 13pt;
+	line-height: 1.25em;
+	overflow-x: auto;
+	padding: 0.5em;
+	scrollbar-width: thin;
+	-moz-tab-size: 4;
+	tab-size: 4;
+}
+
+/* 代码块 - 行号 */
+/* for block of numbers */
+td.hljs-ln-numbers {
+	text-align: center;
+	/* color: #2F7689;
+			background-color: white; */
+	vertical-align: top;
+}
+
+/* for block of code */
+td.hljs-ln-code {
+	padding-left: 10px;
+}
