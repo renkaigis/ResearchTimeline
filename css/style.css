@@ -356,7 +356,7 @@ ol.style1 li {
 	background-color: #e8e8e8;
 	background-image: url('images/bg2.png');
 	color: #565656;
-	margin: 0 0.4em 0 0;
+	margin: 0 0.8em 0 0;
 	border-radius: 0.4em;
 	-moz-transition: background-color .25s ease-in-out;
 	-webkit-transition: background-color .25s ease-in-out;
@@ -723,7 +723,20 @@ ol.style1 li {
 cite {
 	color: red;
 	font-weight: 600;
-	font-family: Consolas, Monaco, monospace;
+	font-size: 85%;
+	font-family: Consolas, Cursive, monospace, Monaco;
+}
+
+q {
+	color: #000093;
+	font-weight: 600;
+	font-size: 85%;
+	font-style: italic;
+	font-family: Consolas, Cursive, monospace, Monaco;
+}
+
+b {
+	color: black;
 }
 
 /* 代码块 */
@@ -743,8 +756,9 @@ code {
 /* for block of numbers */
 td.hljs-ln-numbers {
 	text-align: center;
+	color: #4f8291;
 	/* color: #2F7689;
-			background-color: white; */
+	background-color: white; */
 	vertical-align: top;
 }
 

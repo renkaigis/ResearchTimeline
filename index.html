@@ -179,11 +179,12 @@
 						</tr>
 						<tr>
 							<td class="td-date">11</td>
-							<td class="td-content"><span>① SILO_Heatwaverecords.js, Threshold_P95_SILO.js, TX90_TN90.js
+							<td class="td-content"><span>① <q>SILO_Heatwaverecords.js</q>,
+									<q>Threshold_P95_SILO.js</q>,
+									<q>TX90_TN90.js</q>
 									都可以直接跑通，并生成对应的数据<cite>（Merged_Tmax_2018, Merged_Tmin_2018
-										, CN_Tmean_60_90_P95
-										）。</cite></span>
-								<span>② ERA5_Heatwaverecords.js不能直接跑通，<cite> Collection asset
+										, CN_Tmean_60_90_P95）。</cite></span>
+								<span>② ERA5_Heatwaverecords.js不能直接跑通，<cite>Collection asset
 										'users/tensorflow/continent_polygons' not found.</cite>
 								</span>
 							</td>
@@ -191,7 +192,7 @@
 						</tr>
 						<tr>
 							<td class="td-date">12</td>
-							<td class="td-content"><span>① MainUI.js
+							<td class="td-content"><span>① <q>MainUI.js</q>
 									代码，这部分代码比较多，调用比较多，且存在很多可视化控件，将这部分代码删掉或精简，保留核心计算代码。</span></td>
 							<td class="td-notes"><span></span></td>
 						</tr>
@@ -241,10 +242,15 @@
 						<tr>
 							<td class="td-date">21</td>
 							<td class="td-content" rowspan="4"><span>
-									① TX90_TN90.js 文件成功修改为计算“中国区域”，SILO 数据替换为 ERA5。
-
+									① <q>TX90_TN90.js</q> 文件成功修改为计算“中国区域”，<b>SILO</b> 数据替换为 <b>ERA5</b>。
 								</span><span>
-									②</span>
+									② 阅读于老师发来的农业保险相关文献：“<a
+										href="https://www.sciencedirect.com/science/article/pii/S030691922200015X"
+										target="_blank">Insurance
+										subsidies,
+										climate change,
+										and innovation: Implications for crop yield resiliency，Food Policy. Volume: 108.
+										2022</a>”</span>
 							</td>
 							<td class="td-notes" rowspan="4"><span><a href="post/20220224.html"
 										target="_blank">查看详情>></a></span></td>
@@ -465,19 +471,19 @@
 					</table>
 				</article>
 
-				<!-- Pager -->
-				<!-- <div class="pager"> -->
-				<!-- <a href="#" class="button previous">Previous Page</a> -->
-				<!-- <div class="pages">
-						<a href="#" class="active">1</a>
-						<a href="#">2</a>
-						<a href="#">3</a>
-						<a href="#">4</a>
+				<!-- Pager 翻页（预留接口） -->
+				<div class="pager">
+					<!-- <a href="#" class="button previous">Previous Page</a> -->
+					<div class="pages">
+						<a href="#" class="active">2022Ⅰ</a>
+						<a href="javascript:alert('不要心急嘛~ヾ(o◕∀◕)ﾉヾ')">2022Ⅱ</a>
+						<a href="javascript:alert('干嘛那么猴急呀(一。一;;）')">2023Ⅰ</a>
+						<a href="javascript:alert('精彩在后面哟…￣へ￣')">2023Ⅱ</a>
 						<span>&hellip;</span>
-						<a href="#">20</a>
+						<a href="javascript:alert('该毕业了吧！~\(≧▽≦)/~')">2024Ⅱ</a>
 					</div>
-					<a href="#" class="button next">Next Page</a>
-				</div> -->
+					<a href="javascript:alert('没有了，别再点了！ヾ|≧_≦|〃')" class="button next">Next Page</a>
+				</div>
 
 			</div>
 		</div>
@@ -508,94 +514,6 @@
 				</div>
 			</section>
 
-			<!-- Recent Posts -->
-			<!-- <section class="is-recent-posts">
-				<header>
-					<h2>Recent Posts</h2>
-				</header>
-				<ul>
-					<li><a href="#">Nothing happened</a></li>
-					<li><a href="#">My Dearest Cthulhu</a></li>
-					<li><a href="#">The Meme Meme</a></li>
-					<li><a href="#">Now Full Cyborg</a></li>
-					<li><a href="#">Temporal Flux</a></li>
-				</ul>
-			</section> -->
-
-			<!-- Recent Comments -->
-			<!-- <section class="is-recent-comments">
-				<header>
-					<h2>Recent Comments</h2>
-				</header>
-				<ul>
-					<li>case on <a href="#">Now Full Cyborg</a></li>
-					<li>molly on <a href="#">Untitled Post</a></li>
-					<li>case on <a href="#">Temporal Flux</a></li>
-				</ul>
-			</section> -->
-
-			<!-- Calendar -->
-			<!-- <section class="is-calendar">
-				<div class="inner">
-					<table>
-						<caption>February 2013</caption>
-						<thead>
-							<tr>
-								<th scope="col" title="Monday">M</th>
-								<th scope="col" title="Tuesday">T</th>
-								<th scope="col" title="Wednesday">W</th>
-								<th scope="col" title="Thursday">T</th>
-								<th scope="col" title="Friday">F</th>
-								<th scope="col" title="Saturday">S</th>
-								<th scope="col" title="Sunday">S</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td colspan="4" class="pad"><span>&nbsp;</span></td>
-								<td><span>1</span></td>
-								<td><span>2</span></td>
-								<td><span>3</span></td>
-							</tr>
-							<tr>
-								<td><span>4</span></td>
-								<td><span>5</span></td>
-								<td><a href="#">6</a></td>
-								<td><span>7</span></td>
-								<td><span>8</span></td>
-								<td><span>9</span></td>
-								<td><a href="#">10</a></td>
-							</tr>
-							<tr>
-								<td><span>11</span></td>
-								<td><span>12</span></td>
-								<td><span>13</span></td>
-								<td class="today"><a href="#">14</a></td>
-								<td><span>15</span></td>
-								<td><span>16</span></td>
-								<td><span>17</span></td>
-							</tr>
-							<tr>
-								<td><span>18</span></td>
-								<td><span>19</span></td>
-								<td><span>20</span></td>
-								<td><span>21</span></td>
-								<td><span>22</span></td>
-								<td><a href="#">23</a></td>
-								<td><span>24</span></td>
-							</tr>
-							<tr>
-								<td><a href="#">25</a></td>
-								<td><span>26</span></td>
-								<td><span>27</span></td>
-								<td><span>28</span></td>
-								<td class="pad" colspan="3"><span>&nbsp;</span></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</section> -->
-
 			<!-- Copyright -->
 			<div id="copyright">
 				<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=61909002000104"
@@ -604,7 +522,6 @@
 					<p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">陕公网安备
 						61909002000104号</p>
 				</a>
-
 				<p>
 					&copy; 2022 By RenKai.
 				</p>
@@ -613,7 +530,8 @@
 		</div>
 
 	</div>
-	<!-- 代码块 -->
+
+	<!-- Code Block -->
 	<script>
 		hljs.initHighlightingOnLoad();
 		hljs.initLineNumbersOnLoad();

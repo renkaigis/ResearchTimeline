@@ -46,7 +46,7 @@
 					</header>
 
 					<p>
-						<strong>时间：</strong> 2022/02/24，22:00
+						<strong>时间：</strong> 2022/02/24
 					</p>
 					<p>
 						<strong>内容：</strong>
@@ -72,15 +72,19 @@ function siloset(image){
 	var month = ee.Number.parse(image.get('month'));
 	var day = ee.Number.parse(image.get('day'));
 	
+	// 根据年月日获得日期
 	var newdate = ee.Date.fromYMD(year, month, day);
 	var date = newdate.format('YYYY-MM-dd');
+	// 获取时间戳，为了生成 no
 	var millis = newdate.millis();
 	var no = ee.Date(millis).getRelative('day', 'year');
-	var no =ee.Number.parse(no).add(1);
+	// no 是当前日期的在一年中的编号，应该从 1 开始 
+	no = ee.Number.parse(no).add(1);
 
+	// ERA5 数据已经包含 year 属性了，故不再设置
 	return image.setMulti({
-			'system:time_start' :date,
-			'system:time_end'   :date,
+			'system:time_start' : date,
+			'system:time_end'   : date,
 			"no" : no
 	});
 }</code></pre>
@@ -133,11 +137,6 @@ function siloset(image){
 
 		</div>
 
-	</div>
-
-	<div style="display:none">
-		<script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'>
-		</script>
 	</div>
 
 	<script>
