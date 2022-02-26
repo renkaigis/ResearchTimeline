@@ -696,6 +696,7 @@ ol.style1 li {
 .meeting-p {
 	text-indent: 2em;
 	line-height: 150%;
+	color: rgb(70, 70, 70);
 }
 
 .td-notes a:link {
@@ -721,7 +722,7 @@ ol.style1 li {
 }
 
 cite {
-	color: red;
+	color: hotpink;
 	font-weight: 600;
 	font-size: 85%;
 	font-family: Consolas, Cursive, monospace, Monaco;
@@ -737,6 +738,7 @@ q {
 
 b {
 	color: black;
+	font-family: Consolas, monospace, Monaco;
 }
 
 /* 代码块 */
