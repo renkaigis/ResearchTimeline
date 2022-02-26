@@ -728,6 +728,13 @@ cite {
 	font-family: Consolas, Cursive, monospace, Monaco;
 }
 
+strong cite {
+	color: red;
+	font-weight: 700;
+	font-size: 100%;
+	font-family: Consolas, Cursive, monospace, Monaco;
+}
+
 q {
 	color: #000093;
 	font-weight: 600;
