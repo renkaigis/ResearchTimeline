@@ -16,6 +16,15 @@
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.5.0/highlightjs-line-numbers.min.js">
 	</script>
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+	</script>
+	<!-- <link rel="dns-prefetch" href="//cdn.mathjax.org" />
+
+	<script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+
+	<!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> -->
+
 	<noscript>
 		<link rel="stylesheet" href="../css/5grid/core.css" />
 		<link rel="stylesheet" href="../css/5grid/core-desktop.css" />
@@ -44,7 +53,6 @@
 						<span class="tag-span"><i class="fa-solid fa-tags"></i>&nbsp;工作汇报 </span>
 						</span>
 					</header>
-
 					<p>
 						<strong>时间：</strong> 2022/02/24
 					</p>
@@ -171,20 +179,42 @@ function siloset(image){
 					</p>
 					<p class="meeting-p"><cite>3). Identification strategy</cite></p>
 					<p class="meeting-p">将1994年至2000年期间保费补贴从30% 增加到60% 作为一个自然实验(事件)
-						，以实证方式评估保险补贴对技术变化率和产量弹性衡量的影响。本文的方法是利用虚拟变量比较事件发生前后各组分特定的边坡参数，以识别边坡技术系数的变化。这些虚拟变量确定了1994年后任何变化的总体平均效应。对于虚拟变量来识别补贴效果，必须没有混杂变量。然而，有两个可能的混杂事件：
+						，以实证方式评估保险补贴对技术变化率和产量弹性衡量的影响。文章的方法是利用虚拟变量比较事件发生前后各组分特定的边坡参数，以识别边坡技术系数的变化。这些虚拟变量确定了1994年后任何变化的总体平均效应。对于虚拟变量来识别补贴效果，必须没有混杂变量。然而，有两个可能的混杂事件：
 						气候变化和转基因种子的引进。因此，估计的虚拟变量不能确定补贴效应，而是代表了不断变化的补贴、气候变化和引进转基因种子的综合效应。</p>
 					<p class="meeting-p">
 						文章还独立地对400个县进行了分析，从而产生了400个县级后1994年的影响。文章预计这些效应的异质性是由于补贴变化、气候变化和采用转基因品种的异质性造成的。为了考虑潜在的空间依赖性，采用了空间滞后模型，其中以县之间的空间距离作为空间权重。
 					</p>
 					<p class="meeting-p"><strong>Results</strong></p>
-					<p class="meeting-p">结论</p>
-					<p class="meeting-p">结论</p>
-					<p class="meeting-p"></p>
-					<p class="meeting-p"></p>
-					<p class="meeting-p"></p>
+					<p class="meeting-p">由下图，在 1994
+						年之前，伊利诺斯州斯塔克县和俄亥俄州麦地那县的技术变革率都是正的，但在较高的部分中明显更高；1994年以后，较低部分的技术变化率变化趋于较大和积极，而较高部分的变化趋于较小。</p>
+					<img src="https://ars.els-cdn.com/content/image/1-s2.0-S030691922200015X-gr1_lrg.jpg"
+						class="image image-full" alt="t1">
+					<p class="meeting-p">假设检验结果表明1994年后混合模型的参数发生了非常强烈的变化。然后采用参数估计（\( \delta_l, \delta_u, \delta_u -
+						\delta_l, \delta_\lambda, R_m\ and \ R_a \)）并将它们建模为气候变化、补贴代理和转基因采用率的函数。回归方程的形式如下：</p>
+					<p class="meeting-p">$$ A=\gamma_0 + \gamma_1Climate + \gamma_2Rate_{1995} + \gamma_3GM_{2000} +
+						\epsilon $$</p>
+					<p class="meeting-p">其中 \( A\) 是上述每个事件参数估计值， \( Climate \) 是数据部分详述的气候变化数据， \( Rate_{1995} \) 是 1995
+						年估计的 70%
+						溢价率，作为总补贴的代表， \( GM_{2000} \) 是转基因种子采用率在 2000 年，\( \epsilon \) 表示随机误差。</p>
+					<p class="meeting-p">还做了 Moran’s I 检验残差空间相关性和空间滞后相关性的拉格朗日乘数 (LM)
+						诊断检验。检验结果表明需要空间滞后模型。因此，文章最后使用空间滞后模型重新估计回归，其形式如下：</p>
+					<p class="meeting-p">$$ A=\gamma_0 + \rho WA +\gamma_1Climate + \gamma_2Rate_{1995} +
+						\gamma_3GM_{2000} +
+						\epsilon $$</p>
+					<p class="meeting-p">其中，\( \rho \)表示空间依赖性的标量参数，\( W \)是具有空间权重矩阵的空间滞后因变量，\( A \)类似于等式中的回归参数。</p>
+					<p class="meeting-p"><cite>（结果分析部分对公式、图表的阐述与解释有点晦涩难懂，不好表达，这里就不详细列出了。）</cite></p>
+					<p class="meeting-p">
+						无论是在植物科学还是在农业经济学文献中，都没有一致的衡量产量弹性的方法。文章根据分量分布的收敛和极化的不同测度，提出了四种弹性测度。对于位置的度量(平均值、模式、中位数)，每种方法的解释都略有不同。拟议的措施为衡量产量随时间变化的弹性提供了一个起点，这对于评估减轻风险和支持农业生产的政策非常重要。
+					</p>
+					<p class="meeting-p">考虑到气候变化，文章发现1994年以后产量弹性增加了，且发现转基因种子的引入是造成这种情况的主要原因。同样也发现气候变化和增加的保险补贴降低了产量弹性。
+					</p>
+					<p class="meeting-p">
+						对国内农业政策的影响表明，作物保险补贴的减少将提高未来的产量弹性。但是，其他保险办法，例如共同保险，即由农民和保险公司分担低于保证金的损失，也可以达到同样的效果。虽然共同保险在许多形式的保险中占主导地位，但在许多发达国家，共同保险并不在由政府补贴的作物保险计划中。
+					</p>
 					<p class="meeting-p"><strong><cite>Something did I get</cite></strong></p>
-					<br>
-					<br>
+					<p class="meeting-p">
+						这篇文章主要是针对作物产量弹性和保险补贴、气候变化之间的关系开展研究，农作物保险补贴在全世界各个国家的农业开支中占有非常大的比例，农业保险不仅可以保障农户的收益，扩展农作物种植面积，还能增加新技术的采用率，带来更多的创新。同时，政府相关扶持政策的实施和转基因种子的大量采用进一步增大了产量弹性。这个文章主要还是在前人成果的基础上加以验证，得到一致的研究结论，在考虑了气候变化、空间相关性、空间滞后性、保险补贴率和转基因种子采用率的基础上，最后构建了一个混合模型进行检验。
+					</p>
 
 				</article>
 
