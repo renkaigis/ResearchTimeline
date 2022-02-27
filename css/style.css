@@ -755,7 +755,7 @@ code {
 	font-size: 13pt;
 	line-height: 1.25em;
 	overflow-x: auto;
-	padding: 0.5em;
+	/* padding: 0.5em; */
 	scrollbar-width: thin;
 	-moz-tab-size: 4;
 	tab-size: 4;
@@ -768,7 +768,7 @@ td.hljs-ln-numbers {
 	color: #4f8291;
 	/* color: #2F7689;
 	background-color: white; */
-	vertical-align: top;
+	/* vertical-align: middle; */
 }
 
 /* for block of code */

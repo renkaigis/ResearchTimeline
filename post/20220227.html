@@ -3,30 +3,31 @@
 
 <head>
 	<title>TimeLine - RenKai</title>
-	<link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700|Open+Sans+Condensed:300,700"
 		rel="stylesheet" />
-	<script src="../../js/jquery-1.8.3.min.js"></script>
-	<script src="../../css/5grid/init.js?use=mobile,desktop,1200px,1000px&amp;mobileUI=1&amp;mobileUI.theme=none">
+	<script src="../js/jquery-1.8.3.min.js"></script>
+	<script src="../css/5grid/init.js?use=mobile,desktop,1200px,1000px&amp;mobileUI=1&amp;mobileUI.theme=none">
 	</script>
 	<!-- <script src="https://kit.fontawesome.com/94a7dae2f4.js" crossorigin="anonymous"></script> -->
-	<script src="../../js/fontawesome.js"></script>
-	<link rel="stylesheet" href="../../css/devibeans.min.css">
+	<script src="../js/fontawesome.js"></script>
+	<link rel="stylesheet" href="../css/devibeans.min.css">
 	<script src="http://apps.bdimg.com/libs/highlight.js/9.1.0/highlight.min.js"></script>
-	<script
+	<!-- <script
 		src="https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.5.0/highlightjs-line-numbers.min.js">
-	</script>
+	</script> -->
+	<script src="../js/highlightjs-line-numbers.min.js"></script>
 	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
 	</script>
 	<noscript>
-		<link rel="stylesheet" href="../../css/5grid/core.css" />
-		<link rel="stylesheet" href="../../css/5grid/core-desktop.css" />
-		<link rel="stylesheet" href="../../css/5grid/core-1200px.css" />
-		<link rel="stylesheet" href="../../css/5grid/core-noscript.css" />
-		<link rel="stylesheet" href="../../css/style.css" />
-		<link rel="stylesheet" href="../../css/style-desktop.css" />
-		<link rel="stylesheet" href="../../css/style-1200px.css" />
+		<link rel="stylesheet" href="../css/5grid/core.css" />
+		<link rel="stylesheet" href="../css/5grid/core-desktop.css" />
+		<link rel="stylesheet" href="../css/5grid/core-1200px.css" />
+		<link rel="stylesheet" href="../css/5grid/core-noscript.css" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="stylesheet" href="../css/style-desktop.css" />
+		<link rel="stylesheet" href="../css/style-1200px.css" />
 	</noscript>
 
 </head>
@@ -48,25 +49,26 @@
 						</span>
 					</header>
 					<p>
-						<strong>时间：</strong> 2022/02/24
+						<strong>时间：</strong> 2022/02/21 - 2022/02/27
 					</p>
 					<p>
 						<strong>内容：</strong>
 					</p>
 					<p class="meeting-p">
-						① 将三个代码文件替换为中国区域，跑通并成功输出影像数据，其中<cite>SILO</cite>数据替换为<cite>REA5</cite>
+						① 将<q>TX90_TN90.js, Threshold_P95_SILO.js,
+							SILO_Heatwaverecords.js</q>三个代码文件替换为“中国区域”，跑通并成功输出影像数据（<cite>CN_Merged_Tmin_2018.tif,
+							CN_Merged_Tmax_2018.tif,
+							CN_Tmean_60_90_P95.tif</cite>）（见下图），其中<cite>SILO</cite>数据替换为<cite>REA5</cite>。
+						<q>ERA5_Heatwaverecords.js</q>还有一些问题，需要继续修改。
 					</p>
-					<img src="../../images/2022/20220227-01.png" class="image image-full">
-					<img src="../../images/2022/20220227-02.png" class="image image-full">
-					<img src="../../images/2022/20220227-03.png" class="image image-full">
+					<img src="../images/2022/20220227-01.png" class="image image-full">
+					<img src="../images/2022/20220227-02.png" class="image image-full">
+					<img src="../images/2022/20220227-03.png" class="image image-full">
 					<p class="meeting-p">
-						②
+						② 列出一些代码的修改：
 					</p>
 					<p class="meeting-p">
-						③
-					</p>
-					<p class="meeting-p">
-						④ <cite>function siloset(image)</cite> 核心修改：
+						<cite>function siloset(image)</cite> 核心修改：
 					</p>
 					<pre><code class="language-javascript">// 设置四个属性：'system:time_start','system:time_end','year','no'
 function siloset(image){
@@ -91,7 +93,29 @@ function siloset(image){
 	});
 }</code></pre>
 					<p class="meeting-p">
-						⑤ 精读于老师发来的关于农业保险的文献：
+						其他修改：
+					</p>
+					<pre><code class="language-javascript">var strcol = silotempcol.select('minimum_2m_air_temperature').filter(ee.Filter.and(ee.Filter.gte('no',id_beg),ee.Filter.lte('no',id_end)));
+// 计算90%
+var TP90 = strcol.reduce(ee.Reducer.percentile([90]));
+// 减去
+var tempimage = image.select('minimum_2m_air_temperature').subtract(TP90);
+
+var strcol = silotempcol.select('maximum_2m_air_temperature').filter(ee.Filter.and(ee.Filter.gte('no',id_beg),ee.Filter.lte('no',id_end)));
+// 计算90%
+var TP90 = strcol.reduce(ee.Reducer.percentile([90]));
+// 减去
+var tempimage = image.select('maximum_2m_air_temperature').subtract(TP90);</code></pre>
+					<pre><code class="language-javascript">var strcol_1 = silotempcol.select('minimum_2m_air_temperature').filter(ee.Filter.and(ee.Filter.gte('no',id_beg),ee.Filter.lte('no',365)));
+var strcol_2 = silotempcol.select('minimum_2m_air_temperature').filter(ee.Filter.and(ee.Filter.gte('no',0),ee.Filter.lte('no',id_end)));</code></pre>
+					<pre><code class="language-javascript">var table = ee.FeatureCollection("USDOS/LSIB_SIMPLE/2017");
+// 边界数据，选出中国区域（含台湾）
+var Name_List = ee.List( ['China','Taiwan'] );
+var Inlist_Filter   = ee.Filter.inList( 'country_na', Name_List);
+var China   = table.filter(Inlist_Filter);
+var geometry = China.geometry();</code></pre>
+					<p class="meeting-p">
+						③ 精读于老师发来的关于农业保险的文献：
 					</p>
 					<p class="meeting-p"><strong>Title：</strong></p>
 					<p class="meeting-p"><cite>Insurance subsidies, climate change, and innovation: Implications for
@@ -208,7 +232,7 @@ function siloset(image){
 					<p class="meeting-p">
 						对国内农业政策的影响表明，作物保险补贴的减少将提高未来的产量弹性。但是，其他保险办法，例如共同保险，即由农民和保险公司分担低于保证金的损失，也可以达到同样的效果。虽然共同保险在许多形式的保险中占主导地位，但在许多发达国家，共同保险并不在由政府补贴的作物保险计划中。
 					</p>
-					<p class="meeting-p"><strong><cite>Something did I get</cite></strong></p>
+					<p class="meeting-p"><strong><cite>Something did I get:</cite></strong></p>
 					<p class="meeting-p">
 						这篇文章主要是针对作物产量弹性和保险补贴、气候变化之间的关系开展研究，农作物保险补贴在全世界各个国家的农业开支中占有非常大的比例，农业保险不仅可以保障农户的收益，扩展农作物种植面积，还能增加新技术的采用率，带来更多的创新。同时，政府相关扶持政策的实施和转基因种子的大量采用进一步增大了产量弹性。这个文章主要还是在前人成果的基础上加以验证，得到一致的研究结论，在考虑了气候变化、空间相关性、空间滞后性、保险补贴率和转基因种子采用率的基础上，最后构建了一个混合模型进行检验。
 					</p>
@@ -229,8 +253,8 @@ function siloset(image){
 			<!-- Nav -->
 			<nav id="nav" class="mobileUI-site-nav">
 				<ul>
-					<li><a href="../../">Time Line</a></li>
-					<li><a href="../../about">About Me</a></li>
+					<li><a href="../index.html">Time Line</a></li>
+					<li><a href="../about.html">About Me</a></li>
 					<li class="current_page_item"><a href="#">Details</a></li>
 				</ul>
 			</nav>
@@ -247,7 +271,7 @@ function siloset(image){
 			<div id="copyright">
 				<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=61909002000104"
 					style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img
-						src="../../images/beian.png" style="float:left;" />
+						src="../images/beian.png" style="float:left;" />
 					<p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">陕公网安备
 						61909002000104号</p>
 				</a>
