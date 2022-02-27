@@ -75,7 +75,7 @@ blockquote {
 
 em,
 i {
-	font-style: italic;
+	/* font-style: italic; */
 }
 
 hr {
@@ -739,7 +739,7 @@ q {
 	color: #000093;
 	font-weight: 600;
 	font-size: 85%;
-	font-style: italic;
+	/* font-style: italic; */
 	font-family: Consolas, Cursive, monospace, Monaco;
 }
 
