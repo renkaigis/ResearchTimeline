@@ -106,15 +106,31 @@
 								href="https://www.resdc.cn/data.aspx?DATAID=200" target="_blank">边界数据</a>。</p>
 						<img src="../images/2022/20220304-03.png" class="image image-full">
 						<img src="../images/2022/20220304-04.png" class="image image-full">
-						<p class="meeting-p">⑥ 最终运行结果：</p>
-						<img src="../images/2022/20220304-02.png" class="image image-full">
+
 						<p class="meeting-p">
-							⑦ 列出一些代码的修改：
-						</p>
-						<p class="meeting-p">
-							<cite>ERA5</cite> 华氏度转为摄氏度（处理较慢）：
-						</p>
-						<pre><code class="language-javascript">// Convert to ℃
+							<cite>P95</cite>:
+							<q>Threshold_P95_SILO.js</q> 代码计算得到的
+							<q>“Aus_Tmean_60_90_P95”</q> 就是
+							<cite>P95</cite>，即 <q>“CN_ERA5_P95”</q>；</p>
+						<p class="meeting-p"><cite>TX90 / TN90</cite>:
+							<q>TX90_TN90.js</q> 代码
+							<q>“select('minimum_2m_air_temperature')”</q>
+							计算得到的是
+							<cite>TN90</cite>，即
+							<q>“CN_ERA5_TN90”</q>；<q>“select('maximum_2m_air_temperature')”</q>
+							计算得到的是 <cite>TX90</cite>，即 <q>“CN_ERA5_TX90”</q>；</p>
+						<p class="meeting-p"><cite>EHF</cite>：由 <q>“EHI_Sig_ERA5.js”</q> 生成，即
+							<q>“Merged_EHF_2018”</q>；</p>
+
+						<p class="meeting-p">⑥ 最终运行结果：
+							<img src="../images/2022/20220304-02.png" class="image image-full">
+							<p class="meeting-p">
+								⑦ 列出一些代码的修改：
+							</p>
+							<p class="meeting-p">
+								<cite>ERA5</cite> 华氏度转为摄氏度（处理较慢）：
+							</p>
+							<pre><code class="language-javascript">// Convert to ℃
 var era5 = ERA5_image.map(function(img) {
 	var Tmax = img.select('maximum_2m_air_temperature').subtract(ee.Image(273.15));
 	var Tmin = img.select('minimum_2m_air_temperature').subtract(ee.Image(273.15));
@@ -122,10 +138,10 @@ var era5 = ERA5_image.map(function(img) {
 	var tempimage = ee.Image(Tmax.addBands(Tmin).addBands(Tmean));
 	return tempimage.copyProperties(img, img.propertyNames());
 });</code></pre>
-						<p class="meeting-p">
-							取中国 <cite>夏季（2018-05-01 ~ 2018-10-01）</cite> 的数据：
-						</p>
-						<pre><code class="language-javascript">// 取 'year-05-01' 开始到 153 天后的 era5 数据
+							<p class="meeting-p">
+								取中国 <cite>夏季（2018-05-01 ~ 2018-10-01）</cite> 的数据：
+							</p>
+							<pre><code class="language-javascript">// 取 'year-05-01' 开始到 153 天后的 era5 数据
 function era5temp(year){
 	var stryear = year.toString();
 	var start = stryear.concat('-05-01');
@@ -134,15 +150,15 @@ function era5temp(year){
 	var yearofera5 = ee.ImageCollection(era5).filterDate(start, end);
 	return yearofera5;
 }</code></pre>
-						<p class="meeting-p">
-							⑧ <strong><cite>后续工作安排：</cite></strong>
-						</p>
-						<p class="meeting-p">
-							1）将计算热浪改为计算低温，以 10% 的阈值；
-						</p>
-						<p class="meeting-p">
-							2）目前只是跑通了 <cite>mainUI.js</cite> 可视化界面默认的一组数据，还有其他组数据有待进一步跑通，以及考虑这些数据和结果后续怎么使用和分析。
-						</p>
+							<p class="meeting-p">
+								⑧ <strong><cite>后续工作安排：</cite></strong>
+							</p>
+							<p class="meeting-p">
+								1）将计算热浪改为计算低温，以 10% 的阈值；
+							</p>
+							<p class="meeting-p">
+								2）目前只是跑通了 <cite>mainUI.js</cite> 可视化界面默认的一组数据，还有其他组数据有待进一步跑通，以及考虑这些数据和结果后续怎么使用和分析。
+							</p>
 				</article>
 
 				<!-- Back to Home -->
