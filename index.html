@@ -128,34 +128,48 @@
 						</tr>
 						<tr>
 							<td class="td-date">1</td>
-							<td class="td-content"><span>① <cite>P95</cite>: <q>Threshold_P95_SILO.js</q> 代码计算得到的
-									<q>“Aus_Tmean_60_90_P95”</q> 就是
-									<cite>P95</cite>，即 <q>“CN_ERA5_P95”</q>；</span>
-								<span>② <cite>TX90 / TN90</cite>: <q>TX90_TN90.js</q> 代码
-									<q>“select('minimum_2m_air_temperature')”</q>
-									计算得到的是
-									<cite>TN90</cite>，即
-									<q>“CN_ERA5_TN90”</q>；<q>“select('maximum_2m_air_temperature')”</q>
-									计算得到的是 <cite>TX90</cite>，即 <q>“CN_ERA5_TX90”</q>；</span>
-								<span>③ <cite>EHF</cite>：由 <q>“EHI_Sig_ERA5.js”</q> 生成，即
-									<q>“Merged_EHF_2018”</q>；</span>
+							<td class="td-content">
+								<span>① 修改师兄发来的<q>“EHI_Sig_ERA5.js”</q>代码，用来生成 <cite>EHF</cite> 数据；</span>
+								<span>② 澳洲夏季为 <q>11-01 ~ 04-01（151天）</q> ，将代码修改为中国的夏季时间 <q>05-01 ~
+										10-01（153天）</q>，<q>mainUI.js</q>代码已经基本可以跑通，但有几个图表存在明显的数据错误，还在找原因。</span>
 							</td>
 							<td class="td-notes"><span></span></td>
 						</tr>
 						<tr>
 							<td class="td-date">2</td>
-							<td class="td-content"><span>-</span></td>
+							<td class="td-content"><span>① 理解所有数据的生成方式，寻找出错原因：</span><span><cite>P95</cite>:
+									<q>Threshold_P95_SILO.js</q> 代码计算得到的
+									<q>“Aus_Tmean_60_90_P95”</q> 就是
+									<cite>P95</cite>，即 <q>“CN_ERA5_P95”</q>；</span>
+								<span><cite>TX90 / TN90</cite>: <q>TX90_TN90.js</q> 代码
+									<q>“select('minimum_2m_air_temperature')”</q>
+									计算得到的是
+									<cite>TN90</cite>，即
+									<q>“CN_ERA5_TN90”</q>；<q>“select('maximum_2m_air_temperature')”</q>
+									计算得到的是 <cite>TX90</cite>，即 <q>“CN_ERA5_TX90”</q>；</span>
+								<span><cite>EHF</cite>：由 <q>“EHI_Sig_ERA5.js”</q> 生成，即
+									<q>“Merged_EHF_2018”</q>；</span>
+								<span>② 找到问题所在， <cite>ERA5</cite> 数据中的温度是华氏度，需要在代码中进一步转换为摄氏度。（但是导致了计算
+									<cite>TN90/TX90</cite>的代码输出影像特别慢，由之前的 20 分钟到现在的 1 小时左右） </span></td>
 							<td class="td-notes"><span></span></td>
 						</tr>
 						<tr>
 							<td class="td-date">3</td>
-							<td class="td-content"><span>-</span></td>
+							<td class="td-content"><span>① 代码中所用到的 <q>"USDOS/LSIB_SIMPLE/2017"</q>
+									边界数据集，在中印争议区域存在一些问题，所以替换成自己的边界数据来做。
+									<cite>问题：</cite>1. 西部的<q>阿克赛钦地区</q>，虽然数据集没有让它属于中国，但是可以单独 select 进来；2.
+									西南的<q>藏南地区（阿鲁纳恰尔邦）</q>直接划给了印度，无法单独 select 进来，比较难搞。所以用了中国认可的<a
+										href="https://www.resdc.cn/data.aspx?DATAID=200"
+										target="_blank">边界数据</a>。</span>
+								<span>② 用新的数据重新生成中间数据，并重新跑了一遍代码，效果很好。</span>
+							</td>
 							<td class="td-notes"><span></span></td>
 						</tr>
 						<tr>
 							<td class="td-date">4</td>
-							<td class="td-content"><span>-</span></td>
-							<td class="td-notes"><span></span></td>
+							<td class="td-content"><span>① 组会。</span></td>
+							<td class="td-notes"><span><a href="post/20220304.html" target="_blank">汇报详情>></a></span>
+							</td>
 						</tr>
 						<tr>
 							<td class="td-date">5</td>

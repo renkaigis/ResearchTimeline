@@ -724,7 +724,7 @@ ol.style1 li {
 cite {
 	color: hotpink;
 	font-weight: 600;
-	font-size: 85%;
+	font-size: 90%;
 	font-family: Consolas, Cursive, monospace, Monaco;
 }
 
@@ -738,7 +738,7 @@ strong cite {
 q {
 	color: #000093;
 	font-weight: 600;
-	font-size: 85%;
+	font-size: 90%;
 	/* font-style: italic; */
 	font-family: Consolas, Cursive, monospace, Monaco;
 }
