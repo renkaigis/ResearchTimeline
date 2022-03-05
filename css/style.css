@@ -32,16 +32,6 @@ a {
 	text-decoration: none;
 }
 
-a:visited {
-	color: deepskyblue;
-	text-decoration: none;
-}
-
-a:hover {
-	color: dodgerblue;
-	text-decoration: dashed;
-}
-
 strong,
 b {
 	font-weight: 700;
@@ -712,7 +702,7 @@ ol.style1 li {
 
 .td-notes a:link {
 	color: purple;
-	text-decoration: underline
+	text-decoration: underline;
 }
 
 .td-notes a:visited {
@@ -720,6 +710,20 @@ ol.style1 li {
 }
 
 .td-notes a:hover {
+	color: dodgerblue;
+	text-decoration: dashed;
+}
+
+a.mylink:link {
+	color: deepskyblue;
+}
+
+a.mylink:visited {
+	color: deepskyblue;
+	text-decoration: none;
+}
+
+a.mylink:hover {
 	color: dodgerblue;
 	text-decoration: dashed;
 }
