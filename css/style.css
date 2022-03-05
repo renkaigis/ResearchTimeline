@@ -28,7 +28,18 @@ body {
 }
 
 a {
-	color: #c94663;
+	color: deepskyblue;
+	text-decoration: none;
+}
+
+a:visited {
+	color: deepskyblue;
+	text-decoration: none;
+}
+
+a:hover {
+	color: dodgerblue;
+	text-decoration: dashed;
 }
 
 strong,
@@ -701,14 +712,15 @@ ol.style1 li {
 
 .td-notes a:link {
 	color: purple;
+	text-decoration: underline
 }
 
 .td-notes a:visited {
-	color: purple;
+	color: deepskyblue;
 }
 
 .td-notes a:hover {
-	color: hotpink;
+	color: dodgerblue;
 	text-decoration: dashed;
 }
 
