@@ -1,0 +1,1139 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>TimeLine - RenKai</title>
+	<link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700|Open+Sans+Condensed:300,700"
+		rel="stylesheet" />
+	<script src="../js/jquery-1.8.3.min.js"></script>
+	<script src="../css/5grid/init.js?use=mobile,desktop,1200px,1000px&amp;mobileUI=1&amp;mobileUI.theme=none">
+	</script>
+	<!-- <script src="https://kit.fontawesome.com/94a7dae2f4.js" crossorigin="anonymous"></script> -->
+	<script src="../js/fontawesome.js"></script>
+	<link rel="stylesheet" href="../css/devibeans.min.css">
+	<script src="http://apps.bdimg.com/libs/highlight.js/9.1.0/highlight.min.js"></script>
+	<!-- <script
+		src="https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.5.0/highlightjs-line-numbers.min.js">
+	</script> -->
+	<script src="../js/highlightjs-line-numbers.min.js"></script>
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+	</script>
+	<!-- 返回顶部 -->
+	<link href="../css/backtop.css" rel="stylesheet" />
+	<noscript>
+		<link rel="stylesheet" href="../css/5grid/core.css" />
+		<link rel="stylesheet" href="../css/5grid/core-desktop.css" />
+		<link rel="stylesheet" href="../css/5grid/core-1200px.css" />
+		<link rel="stylesheet" href="../css/5grid/core-noscript.css" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="stylesheet" href="../css/style-desktop.css" />
+		<link rel="stylesheet" href="../css/style-1200px.css" />
+	</noscript>
+
+</head>
+
+<body class="left-sidebar">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Content -->
+		<div id="content" class="mobileUI-main-content">
+			<div id="content-inner">
+
+				<!-- Post -->
+				<article class="is-post is-post-excerpt">
+					<header>
+						<h2><a>Further Information</a></h2>
+						<span class="tag-span"><i class="fa-solid fa-tags"></i>&nbsp;工作记录</span>
+					</header>
+					<p>
+						<strong>工作时间：</strong> 2022/03/05 ~ 2022/03/10
+					</p>
+					<p>
+						<strong>工作内容：熟悉 HeatwaveR 包的用法</strong>
+					</p>
+					<br>
+					<p>
+						<strong>“heatwaveR” 包：</strong>
+					</p>
+					<p class="meeting-p"><span><q>版本: </q></span>0.4.6</p>
+					<p class="meeting-p"><span><q>日期: </q></span>2021-10-26</p>
+					<p class="meeting-p"><span><q>标题: </q></span>Detect Heatwaves and Cold-Spells（检测热浪和寒潮）</p>
+					<p class="meeting-p"><span><q>描述: </q></span>Hobday
+						等人(2016) 首次提出的用于定义、检测和分类称为热浪或寒潮的极端事件的不同方法。此软件包中的功能适用于气温和水温数据。这些检测算法也可用于非温度数据。</p>
+
+					<hr>
+
+					<p>
+						<strong>数据集 Datasets：</strong>
+					</p>
+					<p id="Algiers">
+						1️⃣ <strong>Algiers：阿尔及利亚阿尔及尔的每日最高 (tX) 和最低 (tN) 气温。</strong>
+					</p>
+					<p class="meeting-p"><strong>描述：</strong>是一个数据集，包含 1961 年 1 月 1 日至 2005 年 12 月 31
+						日期间阿尔及利亚阿尔及尔的每日最高和最低气温（摄氏度）和日期。</p>
+					<p class="meeting-p"><strong>用法：</strong><cite>Algiers</cite> </p>
+					<p class="meeting-p"><strong>格式：</strong>具有 16436 行和 3 个变量的数据框：</p>
+					<p class="meeting-p"><span><q>t: </q></span>日期，as.Date() 格式</p>
+					<p class="meeting-p"><span><q>tMax: </q></span>每日最高温度，以摄氏度为单位</p>
+					<p class="meeting-p"><span><q>tMin: </q></span>每日最低温度，以摄氏度为单位</p>
+					<p id="sst_Med">
+						2️⃣ <strong>sst_Med：NOAA 最佳插值 (OI) v2.1 每日 1/4 度 SST，适用于地中海地区。SST（海面温度，Sea Surface
+							Temperature）。</strong>
+					</p>
+					<p class="meeting-p"><strong>描述：</strong>包含 1982 年 1 月 1 日至 2020 年 12 月 31 日地中海地区海面温度（摄氏度）和日期的数据集。
+					</p>
+					<p class="meeting-p"><strong>用法：</strong><cite>sst_Med</cite> </p>
+					<p class="meeting-p"><strong>格式：</strong>具有 14245 行和 2 个变量的数据框：</p>
+					<p class="meeting-p"><span><q>t: </q></span>日期，as.Date() 格式</p>
+					<p class="meeting-p"><span><q>temp: </q></span>SST，以摄氏度为单位</p>
+					<p id="sst_NW_Atl">
+						3️⃣ <strong>sst_NW_Atl：NOAA 最佳插值 (OI) v2.1 每日 1/4 度 SST，适用于西北大西洋地区。</strong> </p>
+					<p class="meeting-p"><strong>描述：</strong>包含 1982 年 1 月 1 日至 2020 年 12 月 31 日西北大西洋地区海面温度（摄氏度）和日期的数据集。
+					</p>
+					<p class="meeting-p"><strong>用法：</strong><cite>sst_NW_Atl</cite> </p>
+					<p class="meeting-p"><strong>格式：</strong>具有 14245 行和 2 个变量的数据框：</p>
+					<p class="meeting-p"><span><q>t: </q></span>日期，as.Date() 格式</p>
+					<p class="meeting-p"><span><q>temp: </q></span>SST，以摄氏度为单位</p>
+					<p id="sst_WA">
+						4️⃣ <strong>sst_WA：NOAA 最佳插值 (OI) v2.1 每日 1/4 度 SST，适用于西澳大利亚地区。</strong> </p>
+					<p class="meeting-p"><strong>描述：</strong>包含 1982 年 1 月 1 日至 2020 年 12 月 31 日西澳大利亚地区海面温度（摄氏度）和日期的数据集。
+					</p>
+					<p class="meeting-p"><strong>用法：</strong><cite>sst_NW_Atl</cite> </p>
+					<p class="meeting-p"><strong>格式：</strong>具有 14245 行和 2 个变量的数据框：</p>
+					<p class="meeting-p"><span><q>t: </q></span>日期，as.Date() 格式</p>
+					<p class="meeting-p"><span><q>temp: </q></span>SST，以摄氏度为单位</p>
+
+					<hr>
+
+					<p>
+						<strong>方法 Function：</strong>
+					</p>
+					<table class="table-timeline">
+						<tr>
+							<th scope="col" title="Date">Date</th>
+							<th scope="col" title="Content">Content</th>
+						</tr>
+						<tr>
+							<td class="td-date" style="width: 20%;" style="width: 20%;"><a href="#ts2clm">ts2clm()</a>
+							</td>
+							<td class="td-content"><span>根据 Hobday et al.(2016) 的定义构建季节性和阈值气候学。
+								</span></td>
+						</tr>
+						<tr>
+							<td class="td-date" style="width: 20%;"><a href="#detect_event">detect_event()</a></td>
+							<td class="td-content"><span>根据 Hobday et al.(2016) 的定义，检测事件的主要函数。</span></td>
+						</tr>
+						<tr>
+							<td class="td-date" style="width: 20%;"><a href="#block_average">block_average()</a>
+							</td>
+							<td class="td-content"><span>计算事件度量的年度平均值。</span></td>
+						</tr>
+						<tr>
+							<td class="td-date" style="width: 20%;"><a href="#category">category()</a></td>
+							<td class="td-content"><span>根据 Hobday et al.(2018) 将事件类别应用到 detect_event() 的输出。</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="td-date" style="width: 20%;"><a href="#exceedance">exceedance()</a></td>
+							<td class="td-content"><span>类似于 detect_event() 的函数，但它检测给定静态阈值上下连续天数。</span></td>
+						</tr>
+						<tr>
+							<td class="td-date" style="width: 20%;"><a href="#event_line">event_line()</a></td>
+							<td class="td-content"><span>从 detect_event() 中创建热浪或寒冷期结果的时间序列线图。</span></td>
+						</tr>
+						<tr>
+							<td class="td-date" style="width: 20%;"><a href="#lolli_plot">lolli_plot()</a></td>
+							<td class="td-content"><span>从 detect_event() 生成的结果中创建所选事件度量的 lolliplot 时间序列。</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="td-date" style="width: 20%;"><a href="#geom_flame">geom_flame()</a></td>
+							<td class="td-content"><span>从时间序列中创建热浪或寒流的火焰多边形。</span></td>
+						</tr>
+						<tr>
+							<td class="td-date" style="width: 20%;"><a href="#geom_lolli">geom_lolli()</a></td>
+							<td class="td-content"><span>从选定事件指标的时间序列创建 lolliplot。</span></td>
+						</tr>
+					</table>
+					<p class="meeting-p">该软件包还提供了三个历史重大地震观测的海温记录数据: 2011 年西澳大利亚事件、2012 年西北大西洋事件和 2003 年地中海事件。</p>
+
+					<p id="ts2clm">
+						1️⃣ <strong>ts2clm()：根据每日时间序列制作气候学。</strong>
+					</p>
+					<p class="meeting-p"><strong>描述：</strong> </p>
+					<p class="meeting-p">使用用户指定的滑动窗口计算平均值和阈值，然后按照 Hobday 等人(2016年)使用的可选移动平均线，从每日温度的时间序列创建一个每日气候学。
+					</p>
+					<p class="meeting-p"><strong>用法：</strong> </p>
+					<pre><code>ts2clm(
+	data,
+	x = t,
+	y = temp,
+	climatologyPeriod,
+	maxPadLength = FALSE,
+	windowHalfWidth = 5,
+	pctile = 90,
+	smoothPercentile = TRUE,
+	smoothPercentileWidth = 31,
+	clmOnly = FALSE,
+	var = FALSE,
+	roundClm = 4
+)</code></pre>
+					<p class="meeting-p"><strong>参数：</strong> </p>
+					<p class="meeting-p"><span><q>data: </q></span>具有两列的数据帧。在默认设置中(即省略参数 x 和 y; 见下文) ，数据集应该具有标题 t 和
+						temp。T 列是 Date 类的日期向量，而 temp 是测量的变量(默认情况下假设为 temperature)。</p>
+					<p class="meeting-p"><span><q>x: </q></span>此列应包含一个日期向量。如果数据库中出现了标题为 t 的列，则可以省略该参数;
+						否则，在此处指定具有日期的列的名称。</p>
+					<p class="meeting-p"><span><q>y: </q></span>这是一个包含度量变量的列。如果列名与默认值(即 temp)不同，请在此处指定列名。</p>
+					<p class="meeting-p"><span><q>climatologyPeriod:
+							</q></span>必须。应该向该参数传递两个值(参见下面的示例)。第一个值应该是气候学时期开始的选定日期，第二个值应该是该时期结束的日期。然后利用这一选定时期(最好是30年)计算季节周期和极值阈值。
+					</p>
+					<p class="meeting-p"><span><q>maxPadLength: </q></span>指定在输入温度时间序列中插入(pad)缺失数据(指定为 NA)的最大天数;
+						也就是说，长度大于 maxPadLength 的任何连续的 NAs 块都将保留为 NA。默认值为 FALSE。设置为要插值的整数。将 maxPadLength 设置为 TRUE
+						将返回一个错误。</p>
+					<p class="meeting-p"><span><q>windowHalfWidth:
+							</q></span>滑动窗口宽度约为年中心日的一侧，用于气候学和阈值百分位数的汇集和计算。违约是5天，窗口宽度为11天，集中在11天系列的第6天。</p>
+					<p class="meeting-p"><span><q>pctile : </q></span>检测事件的阈值百分位数(%)。默认为90% 。如果打算将这些阈值数据是用于 MCSs ，设置
+						pctile = 10，或者其他低值。</p>
+					<p class="meeting-p"><span><q>smoothPercentile:
+							</q></span>布尔开关选择是否平滑气候学和阈值百分位数时间序列的移动平滑百分位数宽度。默认值为
+						TRUE。</p>
+					<p class="meeting-p"><span><q>smoothPercentileWidth: </q></span>全宽移动平均窗口平滑气候学和阈值。默认为31天。</p>
+					<p class="meeting-p"><span><q>clmOnly
+								: </q></span>选择只计算和返回气候信息，默认是 FALSE。</p>
+					<p class="meeting-p"><span><q>var: </q></span>引入这个参数是为了让用户选择是否要计算每个 doy 季节性信号的方差。默认的 FALSE
+						将阻止计算，可能会提高网格数据的计算速度，并减少输出的大小。方差最初是作为 Hobday
+						等人(2016年)标准输出的一部分引入的，但很少有研究人员使用它，因此现在普遍认为它是不必要的。
+					</p>
+					<p class="meeting-p"><span><q>roundClm: </q></span>这个参数允许用户选择多少个小数位的海洋和脱粒输出将四舍五入。默认值是4。为防止舍入设定值
+						roundClm = FALSE。此参数只能给定数值或 FALSE。</p>
+					<p class="meeting-p"><span><strong>返回值: </strong></span></p>
+					<p class="meeting-p">该函数将返回一个带有输入时间序列和新计算的气候学的 tibble (参见
+						tidyverse)。气候学包括季节气候学和计算 MHWs
+						的阈值。该软件是为创建每日气温的气候而设计的，下面指定的单位反映了预期的目的。然而，各种其他类型的气候可能会产生，如果是这样的话，适当的单位需要由用户决定。
+					</p>
+					<p class="meeting-p"><span><q>doy: </q></span>儒略日，非闰年为 1...59 和 61...366，闰年为 1...366。</p>
+					<p class="meeting-p"><span><q>t: </q></span>data 中提供的原始时间序列中的数据向量。如果为 x 参数提供了备用列，则该名称将更适合用于本列。
+					</p>
+					<p class="meeting-p"><span><q>temp: </q></span>根据提供给函数的原始 data 确定的测量向量。如果给 y 参数一个不同的列，这里会显示。</p>
+					<p class="meeting-p"><span><q>seas: </q></span>气候的季节循环[摄氏度]。</p>
+					<p class="meeting-p"><span><q>thresh: </q></span>随季节变化的阈值(例如，90%)[ deg. c ]。用于检测 _
+						事件以检测/计算事件(MHWs)。
+					</p>
+					<p class="meeting-p"><span><q>var: </q></span>经季节性变化的方差(标准差)[ deg.c ]。如果 var = FALSE (默认值)
+						，则不返回此列。
+					</p>
+					<p class="meeting-p">如果 clmOnly 启用，只返回365或366天的气候学。</p>
+					<p class="meeting-p"><span><strong>说明: </strong></span></p>
+					<p class="meeting-p">① 这个函数假设输入时间序列由连续的日值组成，缺失的值很少。支持在日历年中开始和结束的时间范围。</p>
+					<p class="meeting-p">②
+						为了产生一种平滑可能存在的任何十年热力周期的气候学，建议指定一个至少30年的周期。另外，气候学期的开始日期和结束日期应为整年，例如“1982-01-01” 至 “2011-12-31”
+						或
+						“1982-07-01” 至 “2012-06-30” ;
+						如果不是，这可能导致在一个时间序列内属于某个月份的数据权重不等。每日气候学将被创建;
+						也就是说，气候学将由一年中每一天的一个平均温度(365或366天，取决于闰年的处理方式)组成，平均值将基于样本大小，该样本大小是由 climatologyPeriod
+						的起始和终止值以及 windowwhalfwidth 指定的滑动窗口宽度所决定的时间长度的函数。 </p>
+					<p class="meeting-p">③ 这个函数支持闰年。这是通过忽略2月29日的气候学和阈值的初始计算来实现的。然后2月29日的数值从2月28日和3月1日的数值中线性插值。</p>
+					<p class="meeting-p">④ 以前版本的 ts2clm
+						() 进行了测试，以查看是否复制了某些行，或者每天是否有复制的温度读数，但是现在已经禁用了这个功能。如果用户担心这种重复的测量，建议在将时间序列提供给 ts2clm
+						() 之前实现必要的检查和修复。</p>
+					<p class="meeting-p"><span><strong>示例: </strong></span></p>
+					<pre><code>res <- ts2clm(sst_WA, climatologyPeriod = c("1983-01-01", "2012-12-31"))
+res[1:10, ]
+# A tibble: 10 x 5
+# doy t           temp  seas thresh
+# &lt;int&gt; &lt;date&gt;     &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;
+# 1     1 1982-01-01  20.9  21.6   23.0
+# 2     2 1982-01-02  21.2  21.6   23.0
+# 3     3 1982-01-03  21.4  21.7   23.0
+# 4     4 1982-01-04  21.2  21.7   23.1
+# 5     5 1982-01-05  21.3  21.7   23.1
+# 6     6 1982-01-06  21.6  21.7   23.1
+# 7     7 1982-01-07  21.7  21.8   23.2
+# 8     8 1982-01-08  21.5  21.8   23.2
+# 9     9 1982-01-09  21.4  21.8   23.2
+# 10   10 1982-01-10  21.4  21.8   23.3
+
+# Or if one only wants the 366 day climatology
+res_clim <- ts2clm(sst_WA, climatologyPeriod = c("1983-01-01", "2012-12-31"),
+					clmOnly = TRUE)
+res_clim[1:10, ]
+# doy    seas  thresh
+# 1:   1 21.6080 22.9605
+# 2:   2 21.6348 22.9987
+# 3:   3 21.6621 23.0376
+# 4:   4 21.6895 23.0771
+# 5:   5 21.7169 23.1130
+# 6:   6 21.7436 23.1460
+# 7:   7 21.7699 23.1775
+# 8:   8 21.7958 23.2080
+# 9:   9 21.8217 23.2366
+# 10:  10 21.8478 23.2649
+
+# Or if one wants the variance column included in the results
+res_var <- ts2clm(sst_WA, climatologyPeriod = c("1983-01-01", "2012-12-31"),
+					var = TRUE)
+res_var[1:10, ]
+# A tibble: 10 x 6
+# doy t           temp  seas thresh   var
+# &lt;int&gt; &lt;date&gt;     &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;
+# 1     1 1982-01-01  20.9  21.6   23.0 0.958
+# 2     2 1982-01-02  21.2  21.6   23.0 0.964
+# 3     3 1982-01-03  21.4  21.7   23.0 0.968
+# 4     4 1982-01-04  21.2  21.7   23.1 0.973
+# 5     5 1982-01-05  21.3  21.7   23.1 0.976
+# 6     6 1982-01-06  21.6  21.7   23.1 0.980
+# 7     7 1982-01-07  21.7  21.8   23.2 0.983
+# 8     8 1982-01-08  21.5  21.8   23.2 0.986
+# 9     9 1982-01-09  21.4  21.8   23.2 0.988
+# 10   10 1982-01-10  21.4  21.8   23.3 0.991</code></pre>
+					<br>
+					<p id="detect_event">
+						2️⃣ <strong>detect_event()：检测热浪和寒流。</strong>
+					</p>
+					<p class="meeting-p"><strong>描述：</strong> </p>
+					<p class="meeting-p">将 Hobday
+						等人(2016年)的海洋热浪定义应用于一个给定值的输入时间序列(通常，但不一定限于，温度)以及一个每日日期矢量和预先计算的季节和阈值气候学，这些气候学可以用 ts2clm
+						或其他方法创建。
+					</p>
+					<p class="meeting-p"><strong>用法：</strong> </p>
+					<pre><code>detect_event(
+	data,
+	x = t,
+	y = temp,
+	seasClim = seas,
+	threshClim = thresh,
+	threshClim2 = NA,
+	minDuration = 5,
+	minDuration2 = minDuration,
+	joinAcrossGaps = TRUE,
+	maxGap = 2,
+	maxGap2 = maxGap,
+	coldSpells = FALSE,
+	protoEvents = FALSE,
+	categories = FALSE,
+	roundRes = 4,
+	...
+)</code></pre>
+					<p class="meeting-p"><strong>参数：</strong> </p>
+					<p class="meeting-p"><span><q>data:</q></span>至少有四列的数据框。在默认设置中(即省略参数 x、 y、 seas 和 thresh;
+						立即参见下面的内容) ，数据集应该包含头 t、 temp、 seas 和 thresh。T 列是日期类别的向量，temp 是测量变量(默认假设为温度) ，海洋是季节周期每日气候学
+						(366天)
+						，thresh 是可以检测到事件的季节周期每日阈值。适当格式的数据由 ts2clm 函数创建，但是如果您自己的数据满足 ts2clm
+						指定的条件，则可以提供这些数据。如果 data 的列名与这里列出的列名匹配，则可以忽略以下四个参数。</p>
+					<p class="meeting-p"><span><q>x: </q></span>根据 ts2clm 的规范，该列应该包含一个日期向量。如果数据库中出现了标题为 t
+						的列，则可以省略该参数;
+						否则，在此处指定具有日期的列的名称。</p>
+					<p class="meeting-p"><span><q>y: </q></span>这是一个包含度量变量的列。如果列名与默认值(即 temp )不同，请在此处指定列名。</p>
+					<p class="meeting-p"><span><q>seasClim: </q></span>这个争论的结果假设季节性气候学专栏被称为 seas，因为这与 ts2clm
+						的输出相匹配。如果季节性气候学的专栏名称不同，请在此处提供。</p>
+					<p class="meeting-p"><span><q>threshClim: </q></span>阈值气候学列应该称为 thresh。如果不是，请在此处提供阈值列的名称。</p>
+					<p class="meeting-p"><span><q>threshClim2: </q></span>如果希望提供第二个气候阈值过滤器，以便更严格地检测事件，则应在此提供包含逻辑值(即
+						TRUE FALSE)的向量或列。默认情况下，此参数被忽略。它的主要目的是允许包含 tMin 和 tMax 阈值。</p>
+					<p class="meeting-p"><span><q>minDuration: </q></span>接受检测到的事件的最短持续时间。默认值为5天。</p>
+					<p class="meeting-p"><span><q>minDuration2: </q></span>通过 threshClim 和 threshClim
+						过滤后接受事件的最小持续时间。默认情况下 minDuration2 = minDuration，如果没有指定 threshClim2，则忽略该值。</p>
+					<p class="meeting-p"><span><q>joinAcrossGaps: </q></span>布尔开关，指示是否连接 maxGap
+						指定的短间隙之前/之后发生的事件。默认值为
+						TRUE。</p>
+					<p class="meeting-p"><span><q>maxGap: </q></span>允许加入 MHWs 的最大间隙长度。默认值为 2 天。</p>
+					<p class="meeting-p"><span><q>maxGap2: </q></span>应用两个阈值后的最大间隙长度。默认情况下 maxGap2 = maxGap，如果没有指定
+						threshClim2，则忽略该值。</p>
+					<p class="meeting-p"><span><q>coldSpells: </q></span>Boolean 指定代码是否应该检测冷事件而不是热事件。默认值为
+						FALSE。请注意，寒冷期的气候阈值被认为是与气候变暖相反的。例如，检测 MHWs 的默认设置是 pctile = 90，如 ts2clm 所示。如果想对 MCSs 使用 detect
+						_
+						event，最好在 ts2clm 中通过设置 pctile = 10 来生成这个阈值(参见下面的示例)。任何值都可以使用，但这是 Schlegel 等人(2017a) 用于计算
+						MCSs
+						的设置。</p>
+					<p class="meeting-p"><span><q>protoEvents: </q></span>Boolean
+						指定是否必须将完整时间序列作为长表返回，连同表示是否超过阈值标准(threshold criterion)和持续时间标准 (durationCriterion)
+						的列，表示是否存在热浪的列(即
+						threshCriterion 和 durationCriterion TRUE) ，以及唯一标识检测到的事件的序列号。在这种情况下，不会报告热浪指标。默认值为 FALSE。</p>
+					<p class="meeting-p"><span><q>categories: </q></span>与其使用 category 作为一个单独的步骤来确定检测到的 MHWs
+						的类别，人们可以选择设置这个论点为 TRUE。可以将 category 函数中使用的相同参数传递给此函数以影响输出。注意，category 的默认行为是仅返回事件数据。若要返回默认检测
+						detect_event
+						输出的相同列表结构，请使用
+						climatology = TRUE。</p>
+					<p class="meeting-p"><span><q>roundRes: </q></span>该参数允许用户选择 MHWs 指标输出的小数位数四舍五入到。默认值是 4。为防止舍入设定值
+						roundRes = FALSE。此参数只能给定数值或 FALSE。</p>
+					<p class="meeting-p">当 categories = TRUE 时在内部传递给 category 的其他参数。有关可能参数的列表，请参阅类别文档。</p>
+					<p class="meeting-p"><strong>返回值：</strong> </p>
+					<p class="meeting-p">这个函数将返回一个包含气候学和事件的列表(参见 tidyverse)
+						，令人惊讶的是，它们分别是气候学和事件结果。气候学包括全天气温的时间序列，季节气候学，阈值和各方面的事件检测。该软件是为探测极端热事件而设计的，下面指定的单位反映了预期的目的。然而，其他各种极端事件可以根据规范检测到，如果是这种情况，则需要由用户确定适当的单位。气候学结果将包含
+						ts2clm 提供的相同栏目以及以下内容:</p>
+					<p class="meeting-p"><span><q>threshCriterion: </q></span>布尔值表示是否 temp 超过 thresh。</p>
+					<p class="meeting-p"><span><q>durationCriterion: </q></span>指示连续 threshCriterion 的周期是否 > =
+						min_duration 的布尔值。
+					</p>
+					<p class="meeting-p"><span><q>event: </q></span>布尔值，指示是否满足定义极端事件的所有条件。</p>
+					<p class="meeting-p"><span><q>event_no: </q></span>表示事件发生的 ID 和顺序的顺序号。</p>
+					<p class="meeting-p"><span><q>intensity: </q></span>温度(或 y 的列数)与海洋之间的差值。只有当 categories = TRUE 和
+						climatology =
+						TRUE 时才添加。</p>
+					<p class="meeting-p"><span><q>category: </q></span>每天的类别分类。只有当 categories = TRUE 和 climatology =
+						TRUE 时才添加。</p>
+					<p class="meeting-p">event 结果通过一系列事件指标进行总结:</p>
+					<p class="meeting-p"><span><q>event_no: </q></span>表示事件的 ID 和顺序的顺序号。</p>
+					<p class="meeting-p"><span><q>index_start: </q></span>事件起始索引。</p>
+					<p class="meeting-p"><span><q>index_end: </q></span>事件结束索引。</p>
+					<p class="meeting-p"><span><q>duration: </q></span>事件的持续时间[天]。</p>
+					<p class="meeting-p"><span><q>date_start: </q></span>事件开始日期[日期]。</p>
+					<p class="meeting-p"><span><q>date_end: </q></span>事件结束日期[日期]。</p>
+					<p class="meeting-p"><span><q>date_peak: </q></span>事件高峰日期[日期]。</p>
+					<p class="meeting-p"><span><q>intensity_mean: </q></span>平均强度 [deg. C]。</p>
+					<p class="meeting-p"><span><q>intensity_max: </q></span>最大(峰值)强度 [deg. C]。</p>
+					<p class="meeting-p"><span><q>intensity_var: </q></span>强度可变性(标准差) [deg. C]。</p>
+					<p class="meeting-p"><span><q>intensity_cumulative: </q></span>累积强度 [摄氏度 / 天]。</p>
+					<p class="meeting-p"><span><q>rate_onset: </q></span>事件发生率 [摄氏度 / 天]。
+
+					</p>
+					<p class="meeting-p"><span><q>rate_decline: </q></span>事件递减率 [摄氏度 / 天]。</p>
+					<p class="meeting-p"><span><q>event_name: </q></span>event 名称。根据提供的 name 和事件的 date_peak
+						的年份生成。如果没有提供 name，则使用默认的“
+						Event”。正如霍布迪等人(2018年)提出的，Moderate 事件没有一个名称，以防止多重名称在同一年。如果在同一年内报告了两个或两个以上级别高于 “Moderate”
+						的事件，则会添加一个尾字母来区分它们(例如 Event 2001a, Event 2001b)。仅当categories = TRUE时添加。 </p>
+					<p class="meeting-p"><span><q>category: </q></span>事件达到/超过的最大类别阈值。仅在 categories = TRUE 时添加。</p>
+					<p class="meeting-p"><span><q>p_moderate: </q></span>在第一个阈值或以上但低于任何进一步阈值的总持续时间(天)的比例。只有当
+						categories
+						= TRUE 时才添加。</p>
+					<p class="meeting-p"><span><q>p_strong: </q></span>在第二个阈值或以上，但低于任何进一步阈值的总持续时间(天)的比例。只有当
+						categories =
+						TRUE 时才添加。</p>
+					<p class="meeting-p"><span><q>p_severe: </q></span>在第三个阈值或以上但低于第四个阈值的总持续时间(天)的比例。只有当 categories
+						=
+						TRUE 时才添加。</p>
+					<p class="meeting-p"><span><q>p_extreme: </q></span>达到或超过第四个阈值（即最后一个阈值）的总持续时间（天数）的比例。只有当
+						categories
+						= TRUE 时才添加。
+					</p>
+					<p class="meeting-p"><span><q>season:
+							</q></span>赛季事件发生的季节。如果该事件发生在两个季节，这将显示为例如“冬季/春季”。跨越三个季节，例如「冬夏」。持续四个或四个以上季节的事件被列为“全年”。十二月(六月)在这里被用作南方(北方)夏季的开始。如果“开始”，“高峰”，或“结束”是给予赛季的争论，那么只有一个赛季在选定的时期将给予。只有当
+						categories = TRUE 时才添加。</p>
+					<p class="meeting-p">除了相对于阈值(如90%)而非季节气候外，intensity_max_relThresh, intensity_mean_relThresh,
+						intensity_var_relThresh, 和
+						intensity_cumulative_relThresh均高于阈值。intensity_max_abs, intensity_mean_abs,
+						intensity_var_abs, 和
+						intensity_cumulative_abs除绝对值外，其余均高于季节气候学或阈值。请注意，rate_onset
+						和 rate_decline 将在事件开始/结束于时间序列的第一/最后一天时返回
+						na。当函数应用于大型网格数据集时，这一点可能特别明显。尽管其他度量标准不包含任何错误，并且提供了合理的值，但是请在解释时考虑到这一点。</p>
+					<p class="meeting-p"><strong>说明：</strong> </p>
+					<p class="meeting-p">① 这个函数假设输入时间序列由连续的日值组成，缺失的值很少。支持在日历年中开始和结束的时间范围。伴随函数 ts2clm 有助于编制一个适用于
+						detect_event 的时间序列，虽然这也可以通过 ‘手动’ 完成，只要符合 ts2clm 文档中讨论的标准。</p>
+					<p class="meeting-p">② 开始和下降率的计算假定事件在开始日之前半天开始，在结束日之后半天结束。这与已实现的持续时间定义一致，该定义假定持续时间 = end day -
+						start
+						day + 1。在时间序列开始时已经存在的事件，或在时间序列结束时仍然存在的事件，将报告开始的速度或下降的速度为 NA，因为不可能知道事件开始或结束前半天的温度是多少。</p>
+					<p class="meeting-p">③ 为了事件检测的目的，任何未被插值的缺失温度值(通过可选的 ts2clm 中的
+						maxPadLength)将被设置为等于季节气候学。这意味着它们将触发满足事件定义标准的任何相邻温度值的结束/开始。</p>
+					<p class="meeting-p">④ 如果该代码用于检测寒冷事件 (coldSpells =
+						TRUE)，那么它的工作方式与热浪一样，只是在至少5天内检测到的事件偏差低于第 100 百分位数(例如，第 10 百分位而不是第 90
+						百分位数)。强度报告为负值，代表气候学以下的温度异常。
+					</p>
+					<p class="meeting-p"><strong>示例：</strong> </p>
+					<pre><code>res_clim <- ts2clm(sst_WA, climatologyPeriod = c("1983-01-01", "2012-12-31"))
+out <- detect_event(res_clim)
+
+# 展示气候学:
+out$climatology[1:10, ]
+# A tibble: 10 x 9
+# doy t           temp  seas thresh threshCriterion durationCriterion event event_no
+# &lt;int&gt; &lt;date&gt;     &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;lgl&gt;           &lt;lgl&gt;             &lt;lgl&gt;    &lt;int&gt;
+# 1     1 1982-01-01  20.9  21.6   23.0 FALSE           FALSE             FALSE       NA
+# 2     2 1982-01-02  21.2  21.6   23.0 FALSE           FALSE             FALSE       NA
+# 3     3 1982-01-03  21.4  21.7   23.0 FALSE           FALSE             FALSE       NA
+# 4     4 1982-01-04  21.2  21.7   23.1 FALSE           FALSE             FALSE       NA
+# 5     5 1982-01-05  21.3  21.7   23.1 FALSE           FALSE             FALSE       NA
+# 6     6 1982-01-06  21.6  21.7   23.1 FALSE           FALSE             FALSE       NA
+# 7     7 1982-01-07  21.7  21.8   23.2 FALSE           FALSE             FALSE       NA
+# 8     8 1982-01-08  21.5  21.8   23.2 FALSE           FALSE             FALSE       NA
+# 9     9 1982-01-09  21.4  21.8   23.2 FALSE           FALSE             FALSE       NA
+# 10   10 1982-01-10  21.4  21.8   23.3 FALSE           FALSE             FALSE       NA
+
+# 展示热浪:
+out$event[1:5, 1:10]
+# A tibble: 5 x 10
+# event_no index_start index_peak index_end duration date_start date_peak  date_end   intensity_mean intensity_max
+# &lt;int&gt;       &lt;int&gt;      &lt;int&gt;     &lt;int&gt;    &lt;dbl&gt; &lt;date&gt;     &lt;date&gt;     &lt;date&gt;              &lt;dbl&gt;         &lt;dbl&gt;
+# 1        1         885        887       889        5 1984-06-03 1984-06-05 1984-06-07           1.70          1.92
+# 2        2         899        901       904        6 1984-06-17 1984-06-19 1984-06-22           1.99          2.11
+# 3        3         908        922       926       19 1984-06-26 1984-07-10 1984-07-14           1.91          2.22
+# 4        4        1023       1027      1029        7 1984-10-19 1984-10-23 1984-10-25           1.46          1.83
+# 5        5        1033       1034      1037        5 1984-10-29 1984-10-30 1984-11-02           1.30          1.49
+
+# 或者如果想计算 MCSs
+res_clim <- ts2clm(sst_WA, climatologyPeriod = c("1983-01-01", "2012-12-31"),
+                   pctile = 10)
+out <- detect_event(res_clim, coldSpells = TRUE)
+
+# 展示气候学:
+out$climatology[1:10, ]
+# A tibble: 10 x 9
+# doy t           temp  seas thresh threshCriterion durationCriterion event event_no
+# &lt;int&gt; &lt;date&gt;     &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;lgl&gt;           &lt;lgl&gt;             &lt;lgl&gt;    &lt;int&gt;
+# 1     1 1982-01-01  20.9  21.6   20.5 FALSE           FALSE             FALSE       NA
+# 2     2 1982-01-02  21.2  21.6   20.6 FALSE           FALSE             FALSE       NA
+# 3     3 1982-01-03  21.4  21.7   20.6 FALSE           FALSE             FALSE       NA
+# 4     4 1982-01-04  21.2  21.7   20.6 FALSE           FALSE             FALSE       NA
+# 5     5 1982-01-05  21.3  21.7   20.6 FALSE           FALSE             FALSE       NA
+# 6     6 1982-01-06  21.6  21.7   20.7 FALSE           FALSE             FALSE       NA
+# 7     7 1982-01-07  21.7  21.8   20.7 FALSE           FALSE             FALSE       NA
+# 8     8 1982-01-08  21.5  21.8   20.7 FALSE           FALSE             FALSE       NA
+# 9     9 1982-01-09  21.4  21.8   20.8 FALSE           FALSE             FALSE       NA
+# 10   10 1982-01-10  21.4  21.8   20.8 FALSE           FALSE             FALSE       NA
+
+# 展示寒流:
+out$event[1:5, 1:10]
+# A tibble: 5 x 10
+# event_no index_start index_peak index_end duration date_start date_peak  date_end   intensity_mean intensity_max
+# &lt;int&gt;       &lt;int&gt;      &lt;int&gt;     &lt;int&gt;    &lt;dbl&gt; &lt;date&gt;     &lt;date&gt;     &lt;date&gt;              &lt;dbl&gt;         &lt;dbl&gt;
+# 1        1          83         83        87        5 1982-03-24 1982-03-24 1982-03-28          -1.45         -1.59
+# 2        2         194        199       207       14 1982-07-13 1982-07-18 1982-07-26          -1.80         -2.73
+# 3        3         270        272       277        8 1982-09-27 1982-09-29 1982-10-04          -1.24         -1.39
+# 4        4         296        303       306       11 1982-10-23 1982-10-30 1982-11-02          -1.02         -1.28
+# 5        5         672        681       685       14 1983-11-03 1983-11-12 1983-11-16          -1.18         -1.50
+
+# 也可以直接计算事件的类别
+res_clim <- ts2clm(sst_WA, climatologyPeriod = c("1983-01-01", "2012-12-31"))
+out_event <- detect_event(res_clim, categories = TRUE)
+out_list <- detect_event(res_clim, categories = TRUE, climatology = TRUE)
+
+# 也可以给出两组独立的阈值标准
+
+# 如果我们想使用两个不同的百分比阈值，使用detect_event
+thresh_95 <- detect_event(ts2clm(sst_Med, pctile = 95,
+                                 climatologyPeriod = c("1982-01-01", "2011-12-31")),
+                          minDuration = 2, maxGap = 0)$climatology
+# 然后我们在检测我们的事件时使用这个输出
+events_95 <- detect_event(ts2clm(sst_Med, climatologyPeriod = c("1982-01-01", "2011-12-31")),
+                          threshClim2 = thresh_95$event, minDuration2 = 2, maxGap2 = 0)</code></pre>
+					<br>
+					<p id="block_average">
+						3️⃣ <strong>block_average()：计算事件指标的年度平均值。</strong>
+					</p>
+					<p class="meeting-p"><strong>用法：</strong> </p>
+					<pre><code># 用法：
+block_average(data, x = t, y = temp, report = "full")</code></pre>
+					<p class="meeting-p"><strong>参数：</strong> </p>
+					<p class="meeting-p"><span><q>data: </q></span>接受 detect_event 函数返回的数据。</p>
+					<p class="meeting-p"><span><q>x: </q></span>根据 ts2clm 的规范，该列应该包含一个日期向量。如果数据库中出现了标题为 t
+						的列，则可以省略此参数;
+						否则，在此处指定具有日期的列名。</p>
+					<p class="meeting-p"><span><q>y: </q></span>这是一个包含度量变量的列。如果列名与默认值(即 temp)不同，请在此处指定列名。</p>
+					<p class="meeting-p"><span><q>report: </q></span>指定 full 或 partial 。选择完整的原因报告包含任何年份的
+						NAs，在这些年份中没有检测到任何事件(除了计数，这些年份的计数将为零) ，而部分报告只包含检测到事件的年份。默认值是 full。</p>
+					<p class="meeting-p"><strong>返回值：</strong> </p>
+					<p class="meeting-p">该函数将返回一个平均(或聚合)度量的数据框架。它包括以下内容:</p>
+					<p class="meeting-p"><span><q>year: </q></span>指标平均的年份。</p>
+					<p class="meeting-p"><span><q>count: </q></span>每年的事件次数。</p>
+					<p class="meeting-p"><span><q>duration: </q></span>每年[天]事件的平均持续时间。</p>
+					<p class="meeting-p"><span><q>duration_max: </q></span>每年[天]一个事件的最长持续时间。</p>
+					<p class="meeting-p"><span><q>intensity_mean: </q></span>每年平均事件 “平均强度” [摄氏度]。</p>
+					<p class="meeting-p"><span><q>intensity_max: </q></span>年平均事件 “最大(峰值)强度” [ 摄氏度 ]。</p>
+					<p class="meeting-p"><span><q>intensity_max_max: </q></span>每年最大事件 “最大(峰值)强度” [摄氏度]。</p>
+					<p class="meeting-p"><span><q>intensity_var: </q></span>每年的平均事件 “强度变化” [摄氏度]。</p>
+					<p class="meeting-p"><span><q>intensity_cumulative: </q></span>每年的平均事件 “累积强度” [摄氏度 × 天]。</p>
+					<p class="meeting-p"><span><q>rate_onset: </q></span>每年平均事件发生率 [摄氏度/天]。</p>
+					<p class="meeting-p"><span><q>rate_decline: </q></span>每年平均事件递减率[ 摄氏度/天]。</p>
+					<p class="meeting-p"><span><q>total_days: </q></span>每年的事件总天数 [天数]。</p>
+					<p class="meeting-p"><span><q>total_icum: </q></span>每年所有事件的累积强度总和 [摄氏度 × 天]。</p>
+					<p class="meeting-p">除了相对于阈值(如90%)而非季节气候外，intensity_max_relThresh, intensity_mean_relThresh,
+						intensity_var_relThresh 和
+						intensity_cumulative_relThresh 均高于阈值。intensity_max_abs, intensity_mean_abs,
+						intensity_var_abs 和
+						intensity_cumulative_abs 除绝对值外，其余均高于季节气候学或阈值。</p>
+					<p class="meeting-p"><strong>说明：</strong> </p>
+					<p class="meeting-p">① 这个函数需要提供来自 detect _ event 或者 supersonance
+						函数的完整输出。请注意，年平均数只计算完整年份(即从原始时间序列的开始或结束部分时间通过该年份的年份从计算中删除)。</p>
+					<p class="meeting-p">② 这个函数不同于同名函数的 python 实现(例如，blockAverage，参见
+						https://github.com/ecjoliver/marineheatwaves ) ，因为我们只提供计算一年内块的平均(或聚合)事件度量的能力，而 python
+						版本允许任意(整数)块大小。</p>
+					<p class="meeting-p"><strong>示例：</strong> </p>
+					<pre><code>ts <- ts2clm(sst_WA, climatologyPeriod = c("1983-01-01", "2012-12-31"))
+res <- detect_event(ts)
+out <- block_average(res)
+summary(glm(count ~ year, out, family = "poisson"))
+# Call:
+#   glm(formula = count ~ year, family = &quot;poisson&quot;, data = out)
+# 
+# Deviance Residuals: 
+#   Min       1Q   Median       3Q      Max  
+# -2.1428  -1.6759  -0.6056   0.6476   3.1983  
+# 
+# Coefficients:
+#   Estimate Std. Error z value Pr(&gt;|z|)  
+# (Intercept) -39.67427   22.59280  -1.756   0.0791 .
+# year          0.02006    0.01128   1.779   0.0752 .
+# ---
+#   Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+# 
+# (Dispersion parameter for poisson family taken to be 1)
+# 
+# Null deviance: 103.85  on 38  degrees of freedom
+# Residual deviance: 100.63  on 37  degrees of freedom
+# AIC: 163.84
+# 
+# Number of Fisher Scoring iterations: 6
+
+
+library(ggplot2)
+
+ggplot(data = out, aes(x = year, y = count)) +
+  geom_point(colour = "salmon") +
+  geom_line() +
+  labs(x = NULL, y = "Number of events")
+					</code></pre>
+					<img src="../images/2022/20220308-01.png" class="image image-full">
+					<br>
+					<p id="category">
+						4️⃣ <strong>category()：计算事件的类别。</strong>
+					</p>
+					<p class="meeting-p"><strong>描述：</strong> </p>
+					<p class="meeting-p">根据 Hobday et al. (2018) 提出的命名方案，计算由 detect_event 产生的 MHWs 或 MCSs 的类别。</p>
+					<p class="meeting-p"><strong>用法：</strong> </p>
+					<pre><code>category(
+	data,
+	y = temp,
+	S = TRUE,
+	name = "Event",
+	climatology = FALSE,
+	MCScorrect = F,
+	season = "range",
+	roundVal = 4
+)</code></pre>
+					<p class="meeting-p"><strong>参数：</strong> </p>
+					<p class="meeting-p"><span><q>data: </q></span>从 detect_event 函数接收完整的(列表)输出。</p>
+					<p class="meeting-p"><span><q>y: </q></span>包含度量变量的列。如果列名与默认值(即 temp)不同，请在此处指定名称。</p>
+					<p class="meeting-p"><span><q>S:
+							</q></span>这个参数告诉函数数据是否是在南半球数据库(TRUE，默认值)或者北半球数据库(FALSE)中收集的，这样它就可以正确地输出季节列(见下文)。</p>
+					<p class="meeting-p"><span><q>name: </q></span>如果这里提供了字符串(例如 “渤海”) ，它将用于在输出的 event_name
+						列(见下文)中命名事件。如果没有提供值，则默认输出为 “Event”。</p>
+					<p class="meeting-p"><span><q>climatology: </q></span>FALSE 的默认设置将告诉这个函数只输出个别事件的摘要(宽)结果，如 Hobday
+						等人(2018) 所示。如果设置为 TRUE，这个函数将返回两个数据框的列表，与 detect_event 相同。第一个资料气候学，包含了与 detect_event
+						相同的信息，但是增加了日强度(异常高于季节阈值)和类别值。第二个数据类型 event 是该函数默认情况下生成的摘要结果。</p>
+					<p class="meeting-p"><span><q>MCScorrect: </q></span>当计算海洋寒潮 (MCSs) 时，可能会发生在某些地区，更强烈的类别的底部阈值将低于
+						-1.8
+						℃，这在地球上是物理上不可能的，所以如果一个人想修正底部阈值不能超过 -1.8 ℃，将这个参数设置为 TRUE (默认为 FALSE)。</p>
+					<p class="meeting-p"><span><q>season: </q></span>这个参数允许用户决定如何标记 MHWs 发生的季节。默认设置的 “range”
+						将返回季节的范围，其中
+						MHW
+						发生，如 Hobday
+						等人(2018)。人们可以选择使用这个函数，通过给出相应的字符向量，只返回 MHW 的“开始”、“峰值”或“结束”期间的季节。</p>
+					<p class="meeting-p"><span><q>roundVal: </q></span>此参数允许用户选择输出四舍五入到小数点后的位数。默认值是 4。为防止舍入设定值
+						roundClm
+						=
+						FALSE。此参数只能给定数值或 FALSE。</p>
+					<p class="meeting-p"><strong>返回值：</strong> </p>
+					<p class="meeting-p">该函数将返回一个 tibble，其结果类似于 Hobday 等人(2018) 的表2中的结果。这为基于类别排序尺度的 detect_event
+						输出中评价事件的程度提供了必要的信息。根据给定的季节气候学和阈值气候学之间的差异，计算分类阈值。这四个分类层次的差值乘以分类层次的差值。默认输出列的定义如下:</p>
+					<p class="meeting-p"><span><q>event_no: </q></span>由 detect_event 确定的事件数，以允许在输出之间连接。</p>
+					<p class="meeting-p"><span><q>event_number: </q></span>事件名称。根据提供的名称值和事件的 peak_date
+						的年份(参见后面)生成。如果没有提供名称值，则使用默认的“
+						Event”。正如霍布迪等人(2018年)提出的，Moderate
+						事件没有一个名称，以防止多重名称在同一年。如果在同一年内报告了两个或两个以上级别高于 “Moderate” 的事件，则会添加一个尾字母来区分它们(例如Event 2001a,
+						Event
+						2001b)。</p>
+					<p class="meeting-p"><span><q>peak_date: </q></span>记录事件最大强度的日期(天)。</p>
+					<p class="meeting-p"><span><q>category: </q></span>事件达到/超过的最大类别阈值。</p>
+					<p class="meeting-p"><span><q>i_max: </q></span>超过阈值的事件的最大强度。</p>
+					<p class="meeting-p"><span><q>duration: </q></span>event 的总持续时间(天)。请注意，这包括测量值
+						y)可能低于阈值的任何可能的日子。因此，事件持续时间(天数)超过某些阈值的比例加起来可能不到100% (参见下面四个项目)。</p>
+					<p class="meeting-p"><span><q>p_moderate: </q></span>在第一个阈值或以上但低于任何进一步阈值的总持续时间(天)的比例。</p>
+					<p class="meeting-p"><span><q>p_strong: </q></span>在第二个阈值或以上，但低于任何其他阈值的总持续时间(天)所占的比例。</p>
+					<p class="meeting-p"><span><q>p_severe: </q></span>在第三个阈值或以上，但低于第四个阈值的总持续时间(天)的比例。</p>
+					<p class="meeting-p"><span><q>p_extreme: </q></span>在第四个和最后一个阈值或以上花费的总持续时间(天)的比例。</p>
+					<p class="meeting-p"><span><q>season:
+							</q></span>事件发生的季节。如果事件发生在两个季节，这将显示为。“冬天/春天”。跨越三个季节，例如。“Winter-Summer”。持续四个或更多季节的活动被列为“全年”。12月(6月)在这里是南方(北方)夏天的开始。如果“start”，“peak”，或“end”被指定为季节参数，则只会给出所选期间的一个季节。
+					</p>
+					<p class="meeting-p">如果 climatology = TRUE，此函数将输出两个数据场列表。第一个数据框 climatology，将包含以下列:</p>
+					<p class="meeting-p"><span><q>t: </q></span>包含日期值的列。</p>
+					<p class="meeting-p"><span><q>event_no: </q></span>数字事件编号标签。</p>
+					<p class="meeting-p"><span><q>intensity: </q></span>高于季节性气候的每日超出量（默认为摄氏度）。</p>
+					<p class="meeting-p"><span><q>category: </q></span></p>
+					<p class="meeting-p">第二个数据框 event 包含这个函数的默认输出，如上所述。</p>
+					<p class="meeting-p"><strong>说明：</strong> </p>
+					<p class="meeting-p">① I 已探测到的中等强度事件，但其最大强度不超过季节气候学与阈值之间的距离。</p>
+					<p class="meeting-p">② II 具有最大强度的强事件，使距季节性气候学和阈值的距离加倍，但不加倍。</p>
+					<p class="meeting-p">③ III 严重事件，使上述距离增加三倍，但不会增加四倍。</p>
+					<p class="meeting-p">④ IV 最大强度为上述距离的四倍或更大的极端事件。可怕的东西...</p>
+					<p class="meeting-p"><strong>示例：</strong> </p>
+					<pre><code>res_WA <- detect_event(ts2clm(sst_WA,
+						climatologyPeriod = c("1983-01-01", "2012-12-31")))
+# 注意，name 参数需要一个字符向量
+cat_WA <- category(res_WA, name = "WA")
+tail(cat_WA)
+# A tibble: 6 x 11
+# event_no event_name peak_date  category   i_max duration p_moderate p_strong p_severe p_extreme season       
+# &lt;int&gt; &lt;fct&gt;      &lt;date&gt;     &lt;chr&gt;      &lt;dbl&gt;    &lt;dbl&gt;      &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;        
+# 1       40 WA 2010c   2010-12-02 II Strong   2.66       15         73       27        0         0 Spring       
+# 2       31 WA 2008a   2008-04-14 III Severe  3.77       34         62       29        3         0 Summer/Fall  
+# 3       22 WA 1999    1999-05-22 II Strong   3.60       95         59       41        0         0 Fall/Winter  
+# 4       58 WA 2014    2014-08-31 II Strong   2.20       12         58       42        0         0 Winter       
+# 5       61 WA 2015    2015-10-02 II Strong   2.43        7         57       43        0         0 Winter/Spring
+# 6       42 WA 2011b   2011-02-28 IV Extreme  6.51       60         47       32        8        13 Summer/Fall 
+
+# 如果这些数据是在北半球收集的，我们必须让函数知道这一点，如下所示
+res_Med <- detect_event(ts2clm(sst_Med,
+                        climatologyPeriod = c("1983-01-01", "2012-12-31")))
+cat_Med <- category(res_Med, S = FALSE, name = "Med")
+tail(cat_Med)
+# A tibble: 6 x 11
+# event_no event_name peak_date  category   i_max duration p_moderate p_strong p_severe p_extreme season       
+# &lt;int&gt; &lt;fct&gt;      &lt;date&gt;     &lt;chr&gt;      &lt;dbl&gt;    &lt;dbl&gt;      &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;        
+# 1       84 Med 2017a  2017-04-12 II Strong   2.70       25         60       36        0         0 Winter/Spring
+# 2       28 Med 2003a  2003-06-20 II Strong   5.02       30         57       43        0         0 Spring/Summer
+# 3       62 Med 2012b  2012-08-20 II Strong   4.22       18         56       44        0         0 Summer       
+# 4       70 Med 2014   2014-10-18 II Strong   3.31      144         49       50        0         0 Summer-Winter
+# 5       44 Med 2007b  2007-04-25 III Severe  4.02       19         42       53        5         0 Spring       
+# 6       88 Med 2018a  2018-04-28 II Strong   3.29       10         20       80        0         0 Spring
+
+# 也可以选择使用这个函数输出每天的数据，类别分类设置:climatology = TRUE
+cat_WA_daily <- category(res_WA, name = "WA", climatology = TRUE)
+head(cat_WA_daily$climatology)
+# A tibble: 6 x 4
+# t          event_no intensity category  
+# &lt;date&gt;        &lt;int&gt;     &lt;dbl&gt; &lt;chr&gt;     
+# 1 1984-06-03        1      1.56 I Moderate
+# 2 1984-06-04        1      1.79 I Moderate
+# 3 1984-06-05        1      1.92 I Moderate
+# 4 1984-06-06        1      1.67 I Moderate
+# 5 1984-06-07        1      1.58 I Moderate
+# 6 1984-06-17        2      2.02 I Moderate
+
+# 请注意，这不会返回完整的时间序列，只会返回检测到事件的天数。
+# 这样做是为了减少那些使用网格数据的人的工作量。
+# 如果想要一个完整的时间序列，每日类别结果可能只是 left_join() 和 detect_event() 结果。
+cat_WA_ts <- dplyr::left_join(res_WA$climatology,
+                              cat_WA_daily$climatology)
+#> Joining, by = c("t", "event_no")
+head(cat_WA_ts)
+# A tibble: 6 x 11
+# doy t           temp  seas thresh threshCriterion durationCriterion event event_no intensity category
+# &lt;int&gt; &lt;date&gt;     &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;lgl&gt;           &lt;lgl&gt;             &lt;lgl&gt;    &lt;int&gt;     &lt;dbl&gt; &lt;chr&gt;   
+# 1     1 1982-01-01  20.9  21.6   23.0 FALSE           FALSE             FALSE       NA        NA NA      
+# 2     2 1982-01-02  21.2  21.6   23.0 FALSE           FALSE             FALSE       NA        NA NA      
+# 3     3 1982-01-03  21.4  21.7   23.0 FALSE           FALSE             FALSE       NA        NA NA      
+# 4     4 1982-01-04  21.2  21.7   23.1 FALSE           FALSE             FALSE       NA        NA NA      
+# 5     5 1982-01-05  21.3  21.7   23.1 FALSE           FALSE             FALSE       NA        NA NA      
+# 6     6 1982-01-06  21.6  21.7   23.1 FALSE           FALSE             FALSE       NA        NA NA 
+					</code></pre>
+					<br>
+					<p id="exceedance">
+						5️⃣ <strong>exceedance()：检测超过给定阈值的连续天数。</strong>
+					</p>
+					<p class="meeting-p"><strong>用法：</strong> </p>
+					<pre><code>exceedance(
+	data,
+	x = t,
+	y = temp,
+	threshold,
+	below = FALSE,
+	minDuration = 5,
+	joinAcrossGaps = TRUE,
+	maxGap = 2,
+	maxPadLength = FALSE
+)</code></pre>
+					<p class="meeting-p"><strong>参数：</strong> </p>
+					<p class="meeting-p"><span><q>data: </q></span>一个至少有两列的数据框: 一个 t 列是 Date
+						类日期的向量，一个 temp 列是给定日期的温度。如果列的命名方式不同，那么它们的名称可以提供为 x 和 y (见下文)。如果数据的缺失天数没有用 NA
+						填充，那么该函数将不能准确地检测超过阈值的连续几天的温度。相应格式的数据由 make_whole 函数创建，但是如果您自己的数据满足给定的条件，则可以直接使用它们。</p>
+					<p class="meeting-p"><span><q>x: </q></span>根据 make_whole 的规范，该列应该包含一个日期向量。如果数据库中出现了标题为 t
+						的列，则可以省略该参数; 否则，在此处指定具有日期的列的名称。</p>
+					<p class="meeting-p"><span><q>y: </q></span>这是一个包含度量变量的列。如果列名与默认值(即 temp)不同，请在此处指定列名。</p>
+					<p class="meeting-p"><span><q>threshold: </q></span>用于确定连续多少天超过感兴趣的温度的静态阈值。</p>
+					<p class="meeting-p"><span><q>below: </q></span>默认为 FALSE。当设置为 TRUE 时，将计算连续天低于阈值变量的温度。当设置为 FALSE
+						时，将计算超过阈值变量的连续天数。</p>
+					<p class="meeting-p"><span><q>minDuration: </q></span>温度必须超过 threshold 变量的最小持续时间。默认为5天。</p>
+					<p class="meeting-p"><span><q>joinAcrossGaps: </q></span>一个 TRUE/FALSE 语句，指示是否加入连续几天的温度以超过
+						maxGap
+						规定的组之间在短时间间隔之前/之后的一个小间隔的阈值。默认值为 TRUE。</p>
+					<p class="meeting-p"><span><q>maxGap: </q></span>当 joinacrossgap = TRUE 时，连接连续天数超过阈值的最大间隔长度。</p>
+					<p class="meeting-p"><span><q>maxPadLength: </q></span>指定在输入温度时间序列中插入(pad)缺失数据(指定为 NA)的最大天数;
+						也就是说，长度大于 maxPadLength 的任何连续的 NAs 块都将保留为 NA。设置为整数。默认是3天。</p>
+					<p class="meeting-p"><strong>返回值：</strong> </p>
+					<p class="meeting-p">该函数将返回一个包含两个 tibbles 的列表(参见
+						tidyverse)。第一个是阈值，它显示每天的温度以及超过给定阈值的特定日子。列表的第二个组成部分是超越数，它显示了超过给定阈值的每个离散天组的混合统计数据。请注意，给予此函数的数据帧中的任何其他列都将在输出的阈值组件中输出。例如，如果使用
+						ts2clm 准备用于分析的时间序列并将其保留在 doy 列中，则此列将显示在输出中。阈值部分显示的信息是: </p>
+					<p class="meeting-p"><span><q>t: </q></span>温度测量日期。如果为函数的 x 参数提供了一个替代名称，那么这个变量的命名可能会不同。</p>
+					<p class="meeting-p"><span><q>temp: </q></span>指定日期的温度[摄氏度]。如果为函数的y参数提供了另一个名称，则该变量的名称可能会不同。</p>
+					<p class="meeting-p"><span><q>thresh: </q></span>用户选择的静态阈值[摄氏度]。</p>
+					<p class="meeting-p"><span><q>thresh_criterion: </q></span>布尔值，指示 temp 是否超过阈值。</p>
+					<p class="meeting-p"><span><q>duration_criterion: </q></span>布尔值，指示连续阈值的周期是否大于等于持续时间。</p>
+					<p class="meeting-p"><span><q>exceedance: </q></span>布尔值，指示是否满足定义离散组超过阈值的所有标准。</p>
+					<p class="meeting-p"><span><q>exceedance_no: </q></span>一个序列号，指示超标的 ID 和发生顺序。</p>
+					<p class="meeting-p">个别超标情况可用下列指标概括:</p>
+					<p class="meeting-p"><span><q>exceedance_no: </q></span>与在输出列表的阈值组件中找到的指示超出的 ID 和顺序相同的序列号。</p>
+					<p class="meeting-p"><span><q>index_start : </q></span>超出开始的行数。</p>
+					<p class="meeting-p"><span><q>index_peak: </q></span>超过最大值的行数。</p>
+					<p class="meeting-p"><span><q>index_end : </q></span>超出结束的行号。</p>
+					<p class="meeting-p"><span><q>duration: </q></span>超标持续时间[天]。</p>
+					<p class="meeting-p"><span><q>date_start: </q></span>超出的开始日期[日期]。</p>
+					<p class="meeting-p"><span><q>date_peak: </q></span>超过峰值的日期[日期]。</p>
+					<p class="meeting-p"><span><q>date_end: </q></span>超出的结束日期 [日期]。</p>
+					<p class="meeting-p"><span><q>intensity_mean: </q></span>平均强度[摄氏度]。</p>
+					<p class="meeting-p"><span><q>intensity_max: </q></span>最大（峰值）强度[摄氏度]。</p>
+					<p class="meeting-p"><span><q>intensity_var: </q></span>强度标准偏差[摄氏度]。</p>
+					<p class="meeting-p"><span><q>intensity_cumulative: </q></span>累积强度[摄氏度x天]。</p>
+					<p class="meeting-p"><span><q>rate_onset: </q></span>开始超标率[摄氏度/天]。</p>
+					<p class="meeting-p"><span><q>rate_decline: </q></span>超标下降率[摄氏度/天]。</p>
+					<p class="meeting-p">intensity_max_abs, intensity_mean_abs, intensity_var_abs 和
+						intensity_cum_abs 如上所述，只是作为绝对量级，而不是相对于阈值。</p>
+					<p class="meeting-p"><strong>说明：</strong> </p>
+					<p class="meeting-p">①
+						这个函数假设输入时间序列由连续的日温度组成，缺失的值很少。附带的函数 make_whole 有助于准备一个适用于 exceedance 的时间序列，尽管这也可以 “手动”
+						完成，只要满足
+						make_whole 文档中讨论的标准。 </p>
+					<p class="meeting-p">② 未来的版本也试图适应每月和每年的时间序列。</p>
+					<p class="meeting-p">③ 起始率和下降率的计算假定超出阈值的时间从开始日前半天开始，在结束日后半天结束。这与已实现的持续时间定义一致，该定义假定 持续时间 = end
+						day -
+						start day + 1。</p>
+					<p class="meeting-p">④ 出于超出检测的目的，任何未插值的温度值(通过可选的 maxPadLength)将保持为 NA。这意味着，如果相邻的温度值超过
+						threshold，它们将触发超标结束。
+					</p>
+					<p class="meeting-p">⑤ 如果这个函数是用来检测给定地形下连续几天的温度，那么这些温度将被视为低于 threshold ，因为在英语中没有超过 threshold
+						的反义词。
+					</p>
+					<p class="meeting-p">这个函数主要是基于在这个包中发现的 detect_event 函数，这个函数是从 Python 算法中移植过来的，Python
+						算法是由塔斯马尼亚大学海洋和南极研究所的 Eric Oliver 于 2015 年 2 月编写的，并且由 Hobday 等人(2016年) 记录。</p>
+					<p class="meeting-p"><strong>示例：</strong> </p>
+					<pre><code>res <- exceedance(sst_WA, threshold = 25)
+# 显示前十天的每日数据:
+res$threshold[1:10, ]
+# A tibble: 10 x 7
+# t           temp thresh threshCriterion durationCriterion exceedance exceedance_no
+# &lt;date&gt;     &lt;dbl&gt;  &lt;dbl&gt; &lt;lgl&gt;           &lt;lgl&gt;             &lt;lgl&gt;              &lt;int&gt;
+# 1 1982-01-01  20.9     25 FALSE           FALSE             FALSE                 NA
+# 2 1982-01-02  21.2     25 FALSE           FALSE             FALSE                 NA
+# 3 1982-01-03  21.4     25 FALSE           FALSE             FALSE                 NA
+# 4 1982-01-04  21.2     25 FALSE           FALSE             FALSE                 NA
+# 5 1982-01-05  21.3     25 FALSE           FALSE             FALSE                 NA
+# 6 1982-01-06  21.6     25 FALSE           FALSE             FALSE                 NA
+# 7 1982-01-07  21.7     25 FALSE           FALSE             FALSE                 NA
+# 8 1982-01-08  21.5     25 FALSE           FALSE             FALSE                 NA
+# 9 1982-01-09  21.4     25 FALSE           FALSE             FALSE                 NA
+#10 1982-01-10  21.4     25 FALSE           FALSE             FALSE                 NA
+
+# 显示前五个超标：
+res$exceedance[1:5, ]
+# A tibble: 5 x 18
+# exceedance_no index_start index_peak index_end duration date_start date_peak  date_end  
+# &lt;dbl&gt;       &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt; &lt;date&gt;     &lt;date&gt;     &lt;date&gt;    
+# 1             1        2682       2683      2686        5 1989-05-05 1989-05-06 1989-05-09
+# 2             2        6342       6351      6358       17 1999-05-13 1999-05-22 1999-05-29
+# 3             3        6362       6363      6368        7 1999-06-02 1999-06-03 1999-06-08
+# 4             4        6686       6688      6691        6 2000-04-21 2000-04-23 2000-04-26
+# 5             5        6698       6699      6707       10 2000-05-03 2000-05-04 2000-05-12
+# ... with 10 more variables: intensity_mean &lt;dbl&gt;, intensity_max &lt;dbl&gt;, intensity_var &lt;dbl&gt;,
+#   intensity_cumulative &lt;dbl&gt;, intensity_mean_abs &lt;dbl&gt;, intensity_max_abs &lt;dbl&gt;,
+#   intensity_var_abs &lt;dbl&gt;, intensity_cum_abs &lt;dbl&gt;, rate_onset &lt;dbl&gt;, rate_decline &lt;dbl&gt;						
+					</code></pre>
+
+					<br>
+					<p id="event_line">
+						6️⃣ <strong>event_line()：创建一个热浪或寒冷期的线图。</strong>
+					</p>
+					<p class="meeting-p"><strong>描述：</strong></p>
+					<p class="meeting-p">按照 Hobday 等人(2016) 中图3的第二行创建一个温暖或寒冷事件的图。</p>
+					<p class="meeting-p"><strong>用法：</strong></p>
+					<pre><code>event_line(
+	data,
+	x = t,
+	y = temp,
+	min_duration = 5,
+	spread = 150,
+	metric = "intensity_cumulative",
+	start_date = NULL,
+	end_date = NULL,
+	category = FALSE,
+	x_axis_title = NULL,
+	x_axis_text_angle = NULL,
+	y_axis_title = NULL,
+	y_axis_range = NULL
+)</code></pre>
+					<p class="meeting-p"><strong>参数：</strong></p>
+					<p class="meeting-p"><span><q>data: </q></span>从 detect_event 函数接收完整的(列表)输出。</p>
+					<p class="meeting-p"><span><q>x: </q></span>根据 make_whole 的规范，该列应该包含一个日期向量。如果数据库中出现了标题为 t
+						的列，则可以省略此参数; 否则，在此处指定具有日期的列名。</p>
+					<p class="meeting-p"><span><q>y: </q></span>这是一个包含度量变量的列。如果列名与默认值(即temp)不同，请在此处指定列名。</p>
+					<p class="meeting-p"><span><q>min_duration: </q></span>最短持续时间(天)的事件必须符合资格的热浪或寒冷期。</p>
+					<p class="meeting-p"><span><q>spread:
+							</q></span>在“开始日期”和“结束日期”指定的时间段内检测到的最大事件之前和之后的天数（根据单位）。默认为150天。
+					</p>
+					<p class="meeting-p"><span><q>metric: </q></span>这告诉函数如何选择应该突出显示的事件作为选定时期内最重要的事件。一个人可以从下列选项中选择:
+						intensity_mean, intensity_max, intensity_var,intensity_cumulative, intensity_mean_relThresh,
+						intensity_max_relThresh, intensity_var_relThresh, intensity_cumulative_relThresh,
+						intensity_mean_abs, intensity_max_abs, intensity_var_abs, intensity_cumulative_abs,
+						rate_onset,
+						rate_decline。目前不支持部分名称匹配，因此请精确地指定度量名称。默认值是 intensity_cumulative 值。</p>
+					<p class="meeting-p"><span><q>start_date:
+							</q></span>检索和绘制最大事件(按指标计算)的时间段的开始日期。这可能不一定对应于整个时间序列中指定指标的最大事件。要绘制整个时间序列中最大的事件，请确保
+						start_
+						date 和 end_date 跨越此事件，或者简单地将两者都保留为 NULL (默认值) ，而 event_line 将使用整个时间序列日期范围。</p>
+					<p class="meeting-p"><span><q>end_date: </q></span>检索并绘制最大事件(按公制)的一段时间内的结束日期。参见 start_date
+						获取更多信息。
+					</p>
+					<p class="meeting-p"><span><q>category: </q></span>一个真或假的布尔选择。如果设置为 FALSE (默认)，event_line() 将按照
+						Hobday 等人(2016) 中图 3 的第二行生成一个图形。如果设置为 TRUE，那么就会产生一个图表，显示所选时期不同类别的 MHWs，如图3所示。如果 category =
+						TRUE，则由于使用了不同的着色方案而忽略度量。</p>
+					<p class="meeting-p"><span><q>x_axis_title: </q></span> X 轴标题</p>
+					<p class="meeting-p"><span><q>x_axis_text_angle: </q></span>如果要更改 x 轴文本的角度，请在这里提供一个单独的数值。</p>
+					<p class="meeting-p"><span><q>y_axis_title: </q></span> Y 轴标题</p>
+					<p class="meeting-p"><span><q>y_axis_range: </q></span>如果希望控制 y 轴范围，可以在这里提供两个数值(例如 c (20,30))。
+					</p>
+					<p class="meeting-p"><strong>返回值：</strong></p>
+					<p class="meeting-p">该函数将返回一个线图，指示气候学、阈值和温度，并在适当的情况下将符合霍布迪等人(2016)规格的冷热事件加以遮蔽。热事件或冷事件的绘制取决于在
+						detect_event 中指定哪个选项。顶部事件检测在选定的时间段将可见在一个更明亮的颜色。这个函数在使用上与 geom_flamein
+						不同，它创建了一个独立的图形。这样做的好处是，你不必事先知道 ggplot2 来创建这个图形。</p>
+					<p class="meeting-p"><strong>示例：</strong></p>
+					<pre><code class="R">ts <- ts2clm(sst_WA, climatologyPeriod = c("1983-01-01", 2012-12-31"))
+res <- detect_event(ts)
+
+event_line(res, spread = 100, metric = "intensity_cumulative", start_date = "2010-12-01", end_date = "2011-06-30")
+#> Warning: It is deprecated to specify `guide = FALSE` to remove a guide. Please use `guide = "none"` instead.</code></pre>
+					<img src="../images/2022/20220308-02.png" class="image image-full">
+					<pre><code>event_line(res, spread = 100, start_date = "2010-12-01", end_date = "2011-06-30", category = TRUE)
+#> Warning: It is deprecated to specify `guide = FALSE` to remove a guide. Please use `guide = "none"` instead.</code></pre>
+					<img src="../images/2022/20220308-03.png" class="image image-full">
+					<p class="meeting-p"></p>
+					<br>
+					<p id="lolli_plot">
+						7️⃣ <strong>lolli_plot()：以 “棒棒糖” 的形式创建所选事件指标的时间线。</strong>
+					</p>
+					<p class="meeting-p"><strong>描述：</strong> </p>
+					<p class="meeting-p">将几个可能的事件指标可视化为棒棒糖图。</p>
+					<p class="meeting-p"><strong>用法：</strong> </p>
+					<pre><code>lolli_plot(
+	data,
+	xaxis = "date_peak",
+	metric = "intensity_max",
+	event_count = 3
+)</code></pre>
+					<p class="meeting-p"><strong>参数：</strong> </p>
+					<p class="meeting-p"><span><q>data: </q></span>detect_event 函数的输出。</p>
+					<p class="meeting-p"><span><q>xaxis: </q></span>其中一个 event_no，date_start 或 date_peak. 默认为
+						date_start。</p>
+					<p class="meeting-p"><span><q>metric: </q></span>intensity_mean, intensity_max,
+						intensity_cumulative
+						和 duration 之一。默认是 intensity_max。</p>
+					<p class="meeting-p"><span><q>event_count: </q></span>要突出显示的顶部事件的数量，由给定的 metric 值决定。默认值为 3。</p>
+					<p class="meeting-p"><strong>返回值：</strong> </p>
+					<p class="meeting-p">该函数将返回沿 y 轴的选定度量的亮度图和选定的 xaxis 值。顶级事件的数量将以更亮的颜色突出显示。此函数与 geom_lolliin
+						的使用不同之处在于，它创建一个独立的图形。这样做的好处是，你不必事先知道 ggplot2 来创建这个图形。</p>
+					<p class="meeting-p"><strong>示例：</strong> </p>
+					<pre><code>ts <- ts2clm(sst_WA, climatologyPeriod = c("1991-01-01", "2020-12-31"))
+res <- detect_event(ts)
+
+library(ggplot2)
+
+# 默认输出
+lolli_plot(res)</code></pre>
+					<img src="../images/2022/20220308-04.png" class="image image-full">
+
+					<br>
+					<p id="geom_flame">
+						8️⃣ <strong>geom_flame()：创建火焰多边形。</strong>
+					</p>
+					<p class="meeting-p"><strong>描述：</strong> </p>
+					<p class="meeting-p">这个函数将在两行之间创建多边形。如果给定一个温度和保持时间序列，就像 detect_event 产生的那样，输出将满足 Hobday
+						等人(2016) 的规范，即 “火焰多边形”。如果有人希望绘制低于给定阈值的多边形，而不是高于阈值的多边形，那么将输入的值转换为 y 和 y2 的值。这个函数在使用上与
+						event_line
+						不同，因为它必须创建为 ggplot ‘geom’ 对象。这样做的好处是，可以根据需要向图形添加额外的信息，作为 geom 层添加到 ggplot2 图形。</p>
+					<p class="meeting-p"><strong>用法：</strong> </p>
+					<pre><code>geom_flame(
+	mapping = NULL,
+	data = NULL,
+	stat = "identity",
+	position = "identity",
+	...,
+	n = 0,
+	n_gap = 0,
+	na.rm = FALSE,
+	show.legend = NA,
+	inherit.aes = TRUE
+)</code></pre>
+					<p class="meeting-p"><strong>参数：</strong> </p>
+					<p class="meeting-p"><span><q>mapping: </q></span>由 aes () 或 aes_() 创建的审美映射集。如果指定并继承了它，aes =
+						TRUE
+						(默认值) ，那么它将与绘图顶层的默认映射结合在一起。如果没有绘图，则必须提供绘图。</p>
+					<p class="meeting-p"><span><q>data: </q></span>在这个图层中显示的数据。有三个选项：① 如果默认值为 NULL，则从调用 ggplot()
+						中指定的绘图数据继承数据。② Frame 或其他对象将覆盖绘图数据。所有对象都将被加强以产生一个数据框架。参见 fortify() ，将为其创建变量。③
+						一个函数将使用一个参数——绘图数据——来调用。返回值必须是一个 data.frame，并将用作层数据。</p>
+					<p class="meeting-p"><span><q>stat: </q></span>要在该层数据上使用的统计转换，如字符串。</p>
+					<p class="meeting-p"><span><q>position: </q></span>位置调整，可以是字符串，也可以是调用位置调整函数的结果。</p>
+					<p class="meeting-p"><span><q>…: </q></span>传递到层的其他参数。这些通常是美学，用来设置一个固定的美学值，如 color = “red” 或
+						size =
+						3。它们也可能是成对 geom/stat 的参数。</p>
+					<p class="meeting-p"><span><q>n: </q></span>在 y 和 y2 之间的区域填充之前，沿 x
+						轴需要的步数(即每日时间序列需要的天数)。缺省值 0 将填充两行之间的所有区域。符合 Hobday 等人(2016) 的标准是 n = 5。</p>
+					<p class="meeting-p"><span><q>n_gap: </q></span>X 轴上允许 geom_flame
+						()连接多边形的步数(即每日时间序列中的天数)。这是有用的时候，一个想要不过滤出部分的多边形倾斜只有短暂低于 y，然后回来以上。0的缺陷不会连接任何多边形。合 Hobday
+						等人(2016)
+						的标准是 n_gap = 2。</p>
+					<p class="meeting-p"><span><q>na.rm: </q></span>如果为 FALSE (默认值) ，则删除缺少的值并发出警告。如果为
+						TRUE，则默认删除缺少的值。
+					</p>
+					<p class="meeting-p"><span><q>show.legend: </q></span>逻辑。这一图层应该包括在图例中吗？默认值是 NA，包括是否映射了任何美学。FALSE
+						从不包括，TRUE 总是包括。它也可以是一个命名的逻辑向量，以精选美学显示。</p>
+					<p class="meeting-p"><span><q>inherit.aes: </q></span>如果是
+						FALSE，则重写默认的美学，而不是与它们结合。这对于同时定义数据和美观的辅助函数非常有用，并且不应该继承默认的绘图规范(例如 border())的行为。</p>
+					<p class="meeting-p"><strong>美学映射：</strong> </p>
+					<p class="meeting-p">geom_flame 理解以下美学(必需的美学用粗体表示):</p>
+					<p class="meeting-p"><span><q>x / y / y2 / colour / fill / size / alpha / linetype</q></span>
+					</p>
+					<p class="meeting-p"><strong>示例：</strong> </p>
+					<pre><code>ts <- ts2clm(sst_WA, climatologyPeriod = c("1983-01-01", "2012-12-31"))
+res <- detect_event(ts)
+mhw <- res$clim
+mhw <- mhw[10580:10690,]
+
+library(ggplot2)
+
+ggplot(mhw, aes(x = t, y = temp)) +
+	geom_flame(aes(y2 = thresh)) +
+	geom_text(aes(x = as.Date("2011-02-01"), y = 28,
+			label = "That's not a heatwave.\nThis, is a heatwave.")) +
+	xlab("Date") + ylab(expression(paste("Temperature [", degree, "C]")))</code></pre>
+					<img src="../images/2022/20220308-05.png" class="image image-full">
+
+					<br>
+					<p id="geom_lolli">
+						9️⃣ <strong>geom_lolli()：计算事件的类别。</strong>
+					</p>
+					<p class="meeting-p"><strong>描述：</strong> </p>
+					<p class="meeting-p">该函数将返回沿 *y*-轴 与沿 *x*-轴 的时间变量的选定度量的强度图。顶部事件的数量(n) 从选定的指标可以突出显示在一个更明亮的颜色与审美价值
+						colour_n。这个函数在使用上与 lolli_plot 不同，因为它必须创建为 ggplot2 ‘geom’ 对象。这样做的好处是可以根据需要逐层向图中添加额外的信息。</p>
+					<p class="meeting-p"><strong>用法：</strong> </p>
+					<pre><code>geom_lolli(
+	mapping = NULL,
+	data = NULL,
+	...,
+	n = 0,
+	na.rm = FALSE,
+	show.legend = NA,
+	inherit.aes = TRUE
+)</code></pre>
+					<p class="meeting-p"><strong>参数：</strong> </p>
+					<p class="meeting-p"><span><q>mapping:</q></span>由 aes ()或 aes_() 创建的审美映射集。如果指定并继承了它，aes = TRUE
+						(默认值) ，那么它将与绘图顶层的默认映射结合在一起。如果没有绘图映射，则必须提供映射。</p>
+					<p class="meeting-p"><span><q>data:</q></span>在这个图层中显示的数据。有三个选项：① 如果默认值为 NULL，则从调用 ggplot
+						()中指定的绘图数据继承数据。② Frame 或其他对象将覆盖绘图数据。所有对象都将被加强以产生一个数据框架。参见 fortify () ，将为其创建变量。③
+						一个函数将使用一个参数——绘图数据——来调用。返回值必须是一个 data.frame，并将用作层数据。</p>
+					<p class="meeting-p"><span><q>…:</q></span>传递到图层的其他参数。这些通常是美学，用来设置一个固定的美学值，如 color = “red” 或
+						size =
+						3。它们也可能是配对 geom/stat 的参数。</p>
+					<p class="meeting-p"><span><q>n:</q></span>要根据提供给 aes(y) 的值突出显示的顶部事件的数量。默认值为0。</p>
+					<p class="meeting-p"><span><q>na.rm:</q></span>如果为 FALSE (默认值) ，则删除缺少的值并发出警告。如果为 TRUE，则默认删除缺少的值。
+					</p>
+					<p class="meeting-p"><span><q>show.legend:</q></span>逻辑。这一图层应该包括在图例中吗？默认值是 NA，包括是否映射了任何美学。FALSE
+						从不包括，TRUE 总是包括。它也可以是一个命名的逻辑向量，以精选美学显示。</p>
+					<p class="meeting-p"><span><q>inherit.aes:</q></span>如果是
+						FALSE，则重写默认的美学，而不是与它们结合。这对于同时定义数据和美观的辅助函数非常有用，并且不应该继承默认的绘图规范(例如 border())的行为。</p>
+					<p class="meeting-p"><strong>美学映射：</strong> </p>
+					<p class="meeting-p"><span><q>x / y / alpha / color / linetype / size / shape / stroke /
+								fill</q></span></p>
+					<p class="meeting-p"><span><q>colour_n:</q></span>
+						虽然这个值可以用作审美，但它作为这个函数的参数效果更好，因为它被设置为使用离散值。一个可以为
+						colour_n 提供连续的值，但是记住一个不能为一个 ggplot2 对象提供多个连续或离散的尺度。因此，如果给 aes (颜色)提供一个连续值，那么给 colour_n
+						提供的值必须是离散的。ggplot2 会尝试自动执行此操作。</p>
+					<p class="meeting-p"><strong>描述：</strong> </p>
+					<pre><code>geom_lolli(
+	mapping = NULL,
+	data = NULL,
+	...,
+	n = 0,
+	na.rm = FALSE,
+	show.legend = NA,
+	inherit.aes = TRUE
+)</code></pre>
+					<p class="meeting-p"><strong>示例：</strong> </p>
+					<pre><code>ts <- ts2clm(sst_WA, climatologyPeriod = c("1983-01-01", "2012-12-31"))
+res <- detect_event(ts)
+mhw <- res$event
+
+library(ggplot2)
+
+# 棒棒糖的高度表示事件持续时间，它们的颜色映射到事件的累积强度：
+ggplot(mhw, aes(x = date_peak, y = duration)) +
+	geom_lolli(aes(colour = intensity_cumulative)) +
+	scale_color_distiller(palette = "Spectral", name = "Cumulative \nintensity") +
+	xlab("Date") + ylab("Event duration [days]")</code></pre>
+					<img src="../images/2022/20220308-06.png" class="image image-full">
+					<pre><code># 棒棒糖的高度代表事件持续时间，前三个（最长）棒棒糖以红色突出显示：
+ggplot(mhw, aes(x = date_peak, y = duration)) +
+	geom_lolli(n = 3, colour_n = "red") +
+	scale_color_distiller(palette = "Spectral") +
+	xlab("Peak date") + ylab("Event duration [days]")</code></pre>
+					<img src="../images/2022/20220308-07.png" class="image image-full">
+
+					<pre><code>因为这是一个适当的几何图形，所以任何一些不恰当的事情都可以用它来做：
+ggplot(mhw, aes(x = event_no, y = intensity_max)) +
+	geom_lolli(shape = 5, aes(colour = rate_onset), linetype = "dotted") +
+	scale_color_distiller(palette = "RdYlGn", name = "Rate \nonset") +
+	xlab("Event number") + ylab("Max intensity [degree C]")</code></pre>
+					<img src="../images/2022/20220308-08.png" class="image image-full">
+
+				</article>
+
+				<!-- Back to Home -->
+				<div class="pager backhome">
+					<a href="../index.html" class="button previous">
+						&lt;&lt;&nbsp;Back to Home</a>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Sidebar -->
+		<div id="sidebar">
+
+			<!-- Logo -->
+			<div id="logo">
+				<h1 class="mobileUI-site-name"><a href="../index.html" style="text-decoration : none">TIMELINE</a></h1>
+			</div>
+
+			<!-- Nav -->
+			<nav id="nav" class="mobileUI-site-nav">
+				<ul>
+					<li><a href="../index.html">Time Line</a></li>
+					<li><a href="../about.html">About Me</a></li>
+					<li class="current_page_item"><a href="#">Details</a></li>
+				</ul>
+			</nav>
+
+			<!-- Text -->
+			<section class="is-text-style1">
+				<div class="inner">
+					<p>学习，思考，实践。
+					</p>
+				</div>
+			</section>
+
+			<!-- Copyright -->
+			<div id="copyright">
+				<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=61909002000104"
+					style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img
+						src="../images/beian.png" style="float:left;" />
+					<p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">陕公网安备
+						61909002000104号</p>
+				</a>
+				<p>
+					&copy; 2022 By RenKai.
+				</p>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- Back to Top -->
+	<script type="text/javascript" src="../js/backtop.js"></script>
+	<a href="#0" class="cd-top"></a>
+
+	<script>
+		hljs.initHighlightingOnLoad();
+		hljs.initLineNumbersOnLoad();
+	</script>
+
+</body>
+
+</html>
