@@ -14,9 +14,6 @@
 	<script src="../js/fontawesome.js"></script>
 	<link rel="stylesheet" href="../css/devibeans.min.css">
 	<script src="http://apps.bdimg.com/libs/highlight.js/9.1.0/highlight.min.js"></script>
-	<!-- <script
-		src="https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.5.0/highlightjs-line-numbers.min.js">
-	</script> -->
 	<script src="../js/highlightjs-line-numbers.min.js"></script>
 	<!-- <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">	</script> -->
 	<script type="text/javascript" src="../js/MathJax.js"> </script>
@@ -46,16 +43,24 @@
 				<!-- Post -->
 				<article class="is-post is-post-excerpt">
 					<header>
-						<h2><a>Further Information</a></h2>
-						<span class="tag-span"><i class="fa-solid fa-tags"></i>&nbsp;工作记录</span>
+						<h2><a>Work Report</a></h2>
+						<span class="tag-span"><i class="fa-solid fa-tags"></i>&nbsp;工作汇报</span>
 					</header>
 					<p>
-						<strong>工作时间：</strong> 2022/03/05 ~ 2022/03/10
+						<strong>工作时间：</strong> 2022/03/05 ~ 2022/03/17
 					</p>
 					<p>
-						<strong>工作内容：熟悉 heatwaveR 包的用法</strong>
+						<strong>工作内容：</strong>
 					</p>
-					<br>
+					<p class="meeting-p">① 熟悉 heatwaveR 包的用法，熟悉 HeatwaveR 包中的数据集及其组织方式，以及包内自带的处理、分析、检测和分类热浪和寒潮等极端事件的函数；
+					</p>
+					<p class="meeting-p">② 关于数据问题，咨询庄伟师兄陕西省气象局高精度预报数据的情况，气象台有 3 km
+						的预报数据（不公开），庄伟师兄推荐使用实况数据，实况数据是在气象系统的天擎，是气象系统内部使用的，申请恐怕比较麻烦；</p>
+					<p class="meeting-p">③ 搜索 ESSD 上的数据集，找符合需求的全球尺度/中国尺度的 1 km 温度数据集；</p>
+					<p class="meeting-p">④ 整理张明希 GEE 的 heatwave 代码，使其更规范。</p>
+					<img src="../images/2022/20220317-01.png" class="image image-full">
+					<img src="../images/2022/20220317-02.png" class="image image-full">
+					<hr>
 					<p>
 						<strong>“heatwaveR” 包：</strong>
 					</p>
@@ -888,7 +893,7 @@ res$exceedance[1:5, ]
 						detect_event 中指定哪个选项。顶部事件检测在选定的时间段将可见在一个更明亮的颜色。这个函数在使用上与 geom_flamein
 						不同，它创建了一个独立的图形。这样做的好处是，你不必事先知道 ggplot2 来创建这个图形。</p>
 					<p class="meeting-p"><strong>示例：</strong></p>
-					<pre><code class="R">ts <- ts2clm(sst_WA, climatologyPeriod = c("1983-01-01", 2012-12-31"))
+					<pre><code>ts <- ts2clm(sst_WA, climatologyPeriod = c("1983-01-01", 2012-12-31"))
 res <- detect_event(ts)
 
 event_line(res, spread = 100, metric = "intensity_cumulative", start_date = "2010-12-01", end_date = "2011-06-30")
